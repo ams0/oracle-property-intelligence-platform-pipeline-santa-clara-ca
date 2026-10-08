@@ -1,0 +1,41 @@
+Evaluation-Only License
+
+Copyright (c) 2026 Alessandro Vozza. All rights reserved.
+
+This repository's software, documentation, configuration, and the pipeline
+outputs the author generated with it (collectively, the "Work") were written
+as a candidate submission for a hiring process.
+
+1. Permitted use. The organization to which the Work was submitted may view,
+   download, build, and run the Work, and access its hosted demonstrations,
+   solely to evaluate the author's candidacy for employment or engagement.
+
+2. Prohibited use. No other right is granted. Without the author's prior
+   written agreement, no one may use the Work, or any part or derivative of
+   it, in production, in a product or service, for commercial purposes, to
+   train or evaluate machine-learning models, or for any purpose other than
+   the evaluation described in section 1. No one may copy, modify, merge,
+   publish, distribute, sublicense, or sell the Work or its derivatives,
+   except as needed for that evaluation.
+
+3. No implied license. Opening a pull request, pushing to a fork, or hosting
+   the Work publicly does not grant any license beyond this one. This does not
+   restrict the limited rights GitHub's Terms of Service give users to view
+   and fork public repositories on GitHub. Those rights include no right to
+   use the Work as described in section 2.
+
+4. Third-party data. Public-source records processed by the Work remain
+   subject to their publishers' own terms. This license covers only the
+   author's own contributions: code, schemas, documentation, derived
+   signals, reconciliation, and the selection and arrangement of the
+   published datasets.
+
+5. Term. Permission under section 1 ends at the earlier of (a) the end of the
+   hiring process or (b) 90 days after the submission date, unless the
+   author agrees otherwise in writing.
+
+6. No warranty. THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM,
+   DAMAGES, OR OTHER LIABILITY ARISING FROM THE WORK OR ITS USE.
+
+For any other use, contact: alessandro@stackmasters.com

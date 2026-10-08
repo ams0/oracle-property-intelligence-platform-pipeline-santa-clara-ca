@@ -1,0 +1,31 @@
+{
+  "name": "oracle-scc-pipeline",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "pipeline": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1147.0",
+    "@duckdb/node-api": "1.5.6-r.1",
+    "@ipld/car": "^5.4.7",
+    "@ipld/dag-pb": "^4.2.0",
+    "ipfs-car": "^3.1.0",
+    "ipfs-unixfs-exporter": "^16.2.3",
+    "multiformats": "^14.0.5",
+    "p-limit": "^7.3.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

@@ -1,0 +1,907 @@
+{
+  "run_id": "run-001",
+  "verified_at": "2026-10-08T13:17:08.324Z",
+  "all_ok": true,
+  "objects": [
+    {
+      "name": "oracle-scc-run-001.car",
+      "cid": "bafybeiass5afv5ndhw355yxnxvbbruldc4v6bi5vltehxajbr2w2pt2cyy",
+      "codec": "car",
+      "expected": {
+        "size": 40748876,
+        "sha256": "8cb11e6971fe70332d782db46c69b47cf4cfe22357f31e2e829ed7e281829836"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafybeiass5afv5ndhw355yxnxvbbruldc4v6bi5vltehxajbr2w2pt2cyy?format=car",
+          "bytesReceived": 40752454,
+          "blocksVerified": 40,
+          "status": 200,
+          "ms": 4616,
+          "size": 40748876,
+          "sha256": "8cb11e6971fe70332d782db46c69b47cf4cfe22357f31e2e829ed7e281829836",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafybeiass5afv5ndhw355yxnxvbbruldc4v6bi5vltehxajbr2w2pt2cyy?format=car",
+          "bytesReceived": 40752454,
+          "blocksVerified": 40,
+          "status": 200,
+          "ms": 4704,
+          "size": 40748876,
+          "sha256": "8cb11e6971fe70332d782db46c69b47cf4cfe22357f31e2e829ed7e281829836",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafybeiass5afv5ndhw355yxnxvbbruldc4v6bi5vltehxajbr2w2pt2cyy?format=car",
+          "bytesReceived": 40752454,
+          "blocksVerified": 40,
+          "status": 200,
+          "ms": 4652,
+          "size": 40748876,
+          "sha256": "8cb11e6971fe70332d782db46c69b47cf4cfe22357f31e2e829ed7e281829836",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "indexes/",
+      "cid": "bafybeih4ta46swabmoluokhrn7hbpsdcwdjjlxzuevzfrughbkptfibfiu",
+      "codec": "directory",
+      "expected": {
+        "size": 8575537,
+        "sha256": ""
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafybeih4ta46swabmoluokhrn7hbpsdcwdjjlxzuevzfrughbkptfibfiu?format=car&dag-scope=block",
+          "bytesReceived": 241,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 78,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafybeih4ta46swabmoluokhrn7hbpsdcwdjjlxzuevzfrughbkptfibfiu?format=car&dag-scope=block",
+          "bytesReceived": 241,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 76,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafybeih4ta46swabmoluokhrn7hbpsdcwdjjlxzuevzfrughbkptfibfiu?format=car&dag-scope=block",
+          "bytesReceived": 241,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 34,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "samples/",
+      "cid": "bafybeic3donfqqke72pg7sve6dpdm35npgglkj4vmi5jxqxxiwuotoconq",
+      "codec": "directory",
+      "expected": {
+        "size": 126171,
+        "sha256": ""
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafybeic3donfqqke72pg7sve6dpdm35npgglkj4vmi5jxqxxiwuotoconq?format=car&dag-scope=block",
+          "bytesReceived": 320,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 45,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafybeic3donfqqke72pg7sve6dpdm35npgglkj4vmi5jxqxxiwuotoconq?format=car&dag-scope=block",
+          "bytesReceived": 320,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 43,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafybeic3donfqqke72pg7sve6dpdm35npgglkj4vmi5jxqxxiwuotoconq?format=car&dag-scope=block",
+          "bytesReceived": 320,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 33,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "tables/",
+      "cid": "bafybeigx7z6enbhao22odmrdr74due6yiozc6eucihgzw4aejunnnrddua",
+      "codec": "directory",
+      "expected": {
+        "size": 32021400,
+        "sha256": ""
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafybeigx7z6enbhao22odmrdr74due6yiozc6eucihgzw4aejunnnrddua?format=car&dag-scope=block",
+          "bytesReceived": 352,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 40,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafybeigx7z6enbhao22odmrdr74due6yiozc6eucihgzw4aejunnnrddua?format=car&dag-scope=block",
+          "bytesReceived": 352,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 44,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafybeigx7z6enbhao22odmrdr74due6yiozc6eucihgzw4aejunnnrddua?format=car&dag-scope=block",
+          "bytesReceived": 352,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 36,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "coverage.json",
+      "cid": "bafkreieedjooxds4ivf3xcs54j33nm3neyvo3qo3sxd43njnu4ymvp3jmi",
+      "codec": "file",
+      "expected": {
+        "size": 8029,
+        "sha256": "841a5ceb8e5c454bbb8a5de277b6b36d262aedc1db95c7cdb52da730cabf6962"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafkreieedjooxds4ivf3xcs54j33nm3neyvo3qo3sxd43njnu4ymvp3jmi?format=raw",
+          "bytesReceived": 8029,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 53,
+          "size": 8029,
+          "sha256": "841a5ceb8e5c454bbb8a5de277b6b36d262aedc1db95c7cdb52da730cabf6962",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafkreieedjooxds4ivf3xcs54j33nm3neyvo3qo3sxd43njnu4ymvp3jmi?format=raw",
+          "bytesReceived": 8029,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 48,
+          "size": 8029,
+          "sha256": "841a5ceb8e5c454bbb8a5de277b6b36d262aedc1db95c7cdb52da730cabf6962",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafkreieedjooxds4ivf3xcs54j33nm3neyvo3qo3sxd43njnu4ymvp3jmi?format=raw",
+          "bytesReceived": 8029,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 42,
+          "size": 8029,
+          "sha256": "841a5ceb8e5c454bbb8a5de277b6b36d262aedc1db95c7cdb52da730cabf6962",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "deltas.json",
+      "cid": "bafkreiavpqwnqpi62tydq7odk3poynryep6htqceskafvwcwdyoe2t7riy",
+      "codec": "file",
+      "expected": {
+        "size": 507,
+        "sha256": "157c2cd83d1ed4f0387dc356deec363823fc79c04492805ad8561e1c4d4ff146"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafkreiavpqwnqpi62tydq7odk3poynryep6htqceskafvwcwdyoe2t7riy?format=raw",
+          "bytesReceived": 507,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 49,
+          "size": 507,
+          "sha256": "157c2cd83d1ed4f0387dc356deec363823fc79c04492805ad8561e1c4d4ff146",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafkreiavpqwnqpi62tydq7odk3poynryep6htqceskafvwcwdyoe2t7riy?format=raw",
+          "bytesReceived": 507,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 51,
+          "size": 507,
+          "sha256": "157c2cd83d1ed4f0387dc356deec363823fc79c04492805ad8561e1c4d4ff146",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafkreiavpqwnqpi62tydq7odk3poynryep6htqceskafvwcwdyoe2t7riy?format=raw",
+          "bytesReceived": 507,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 48,
+          "size": 507,
+          "sha256": "157c2cd83d1ed4f0387dc356deec363823fc79c04492805ad8561e1c4d4ff146",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "history.json",
+      "cid": "bafkreicpkpg2ddblvigagvf3l6nd5s7f5ujkwtmocg5iopbpcelbeavziu",
+      "codec": "file",
+      "expected": {
+        "size": 2,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafkreicpkpg2ddblvigagvf3l6nd5s7f5ujkwtmocg5iopbpcelbeavziu?format=raw",
+          "bytesReceived": 2,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 57,
+          "size": 2,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafkreicpkpg2ddblvigagvf3l6nd5s7f5ujkwtmocg5iopbpcelbeavziu?format=raw",
+          "bytesReceived": 2,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 59,
+          "size": 2,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafkreicpkpg2ddblvigagvf3l6nd5s7f5ujkwtmocg5iopbpcelbeavziu?format=raw",
+          "bytesReceived": 2,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 48,
+          "size": 2,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "indexes/doc_year_calibration.parquet",
+      "cid": "bafkreidmsc5mjsfwmho6ss3s2hjk5yiakil3lm7korvivhvw3afu5qatxi",
+      "codec": "file",
+      "expected": {
+        "size": 1427,
+        "sha256": "6c90bac4c8b661dde94b72d1d2aee1005217b5b3ea746a8a9eb6d80b4ec013ba"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafkreidmsc5mjsfwmho6ss3s2hjk5yiakil3lm7korvivhvw3afu5qatxi?format=raw",
+          "bytesReceived": 1427,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 55,
+          "size": 1427,
+          "sha256": "6c90bac4c8b661dde94b72d1d2aee1005217b5b3ea746a8a9eb6d80b4ec013ba",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafkreidmsc5mjsfwmho6ss3s2hjk5yiakil3lm7korvivhvw3afu5qatxi?format=raw",
+          "bytesReceived": 1427,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 54,
+          "size": 1427,
+          "sha256": "6c90bac4c8b661dde94b72d1d2aee1005217b5b3ea746a8a9eb6d80b4ec013ba",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafkreidmsc5mjsfwmho6ss3s2hjk5yiakil3lm7korvivhvw3afu5qatxi?format=raw",
+          "bytesReceived": 1427,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 36,
+          "size": 1427,
+          "sha256": "6c90bac4c8b661dde94b72d1d2aee1005217b5b3ea746a8a9eb6d80b4ec013ba",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "indexes/property_geo.parquet",
+      "cid": "bafybeigevf2zdcvjw35n5arx7y72itmr22mon654zhposixjoi5msv4wsm",
+      "codec": "file",
+      "expected": {
+        "size": 8574110,
+        "sha256": "5025e8fb90588f1300a2bb9eec098d2973a3f78b94aa47fdf7a99dc06c2b2435"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafybeigevf2zdcvjw35n5arx7y72itmr22mon654zhposixjoi5msv4wsm?format=car",
+          "bytesReceived": 8575017,
+          "blocksVerified": 10,
+          "status": 200,
+          "ms": 718,
+          "size": 8574110,
+          "sha256": "5025e8fb90588f1300a2bb9eec098d2973a3f78b94aa47fdf7a99dc06c2b2435",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafybeigevf2zdcvjw35n5arx7y72itmr22mon654zhposixjoi5msv4wsm?format=car",
+          "bytesReceived": 8575017,
+          "blocksVerified": 10,
+          "status": 200,
+          "ms": 728,
+          "size": 8574110,
+          "sha256": "5025e8fb90588f1300a2bb9eec098d2973a3f78b94aa47fdf7a99dc06c2b2435",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafybeigevf2zdcvjw35n5arx7y72itmr22mon654zhposixjoi5msv4wsm?format=car",
+          "bytesReceived": 8575017,
+          "blocksVerified": 10,
+          "status": 200,
+          "ms": 702,
+          "size": 8574110,
+          "sha256": "5025e8fb90588f1300a2bb9eec098d2973a3f78b94aa47fdf7a99dc06c2b2435",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "reconciliation.json",
+      "cid": "bafkreifocx2dybflbv4d7t7fxklby7w2qczx7ph6ziieuizatptbfamlli",
+      "codec": "file",
+      "expected": {
+        "size": 1612,
+        "sha256": "ae15f43c04ab0d783fcfe5ba961c7eda80b37fbcfeca104a23209be612818b5a"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafkreifocx2dybflbv4d7t7fxklby7w2qczx7ph6ziieuizatptbfamlli?format=raw",
+          "bytesReceived": 1612,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 51,
+          "size": 1612,
+          "sha256": "ae15f43c04ab0d783fcfe5ba961c7eda80b37fbcfeca104a23209be612818b5a",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafkreifocx2dybflbv4d7t7fxklby7w2qczx7ph6ziieuizatptbfamlli?format=raw",
+          "bytesReceived": 1612,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 40,
+          "size": 1612,
+          "sha256": "ae15f43c04ab0d783fcfe5ba961c7eda80b37fbcfeca104a23209be612818b5a",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafkreifocx2dybflbv4d7t7fxklby7w2qczx7ph6ziieuizatptbfamlli?format=raw",
+          "bytesReceived": 1612,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 29,
+          "size": 1612,
+          "sha256": "ae15f43c04ab0d783fcfe5ba961c7eda80b37fbcfeca104a23209be612818b5a",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "samples/aged_roofs_top100.json",
+      "cid": "bafkreic4nbbzg7m7odjoany3zd3uk6uvfedd3p5uw5byacq3wziionafli",
+      "codec": "file",
+      "expected": {
+        "size": 35779,
+        "sha256": "5c6843937d9f70d2e0371bc8f7457a9529063dbfb4b743800a1bb6508734055a"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafkreic4nbbzg7m7odjoany3zd3uk6uvfedd3p5uw5byacq3wziionafli?format=raw",
+          "bytesReceived": 35779,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 141,
+          "size": 35779,
+          "sha256": "5c6843937d9f70d2e0371bc8f7457a9529063dbfb4b743800a1bb6508734055a",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafkreic4nbbzg7m7odjoany3zd3uk6uvfedd3p5uw5byacq3wziionafli?format=raw",
+          "bytesReceived": 35779,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 46,
+          "size": 35779,
+          "sha256": "5c6843937d9f70d2e0371bc8f7457a9529063dbfb4b743800a1bb6508734055a",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafkreic4nbbzg7m7odjoany3zd3uk6uvfedd3p5uw5byacq3wziionafli?format=raw",
+          "bytesReceived": 35779,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 34,
+          "size": 35779,
+          "sha256": "5c6843937d9f70d2e0371bc8f7457a9529063dbfb4b743800a1bb6508734055a",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "samples/open_roofing_permits_oldest100.json",
+      "cid": "bafkreif7ooks3shu3uhsimvzfxobdm53jrsmfl7p4ulxvp6bbfxu2hviti",
+      "codec": "file",
+      "expected": {
+        "size": 52932,
+        "sha256": "bf73952dc8f4dd0f2432b92ddc11b3bb4c64c2afefe5177abfc1096f4d1ea89a"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafkreif7ooks3shu3uhsimvzfxobdm53jrsmfl7p4ulxvp6bbfxu2hviti?format=raw",
+          "bytesReceived": 52932,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 44,
+          "size": 52932,
+          "sha256": "bf73952dc8f4dd0f2432b92ddc11b3bb4c64c2afefe5177abfc1096f4d1ea89a",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafkreif7ooks3shu3uhsimvzfxobdm53jrsmfl7p4ulxvp6bbfxu2hviti?format=raw",
+          "bytesReceived": 52932,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 45,
+          "size": 52932,
+          "sha256": "bf73952dc8f4dd0f2432b92ddc11b3bb4c64c2afefe5177abfc1096f4d1ea89a",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafkreif7ooks3shu3uhsimvzfxobdm53jrsmfl7p4ulxvp6bbfxu2hviti?format=raw",
+          "bytesReceived": 52932,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 28,
+          "size": 52932,
+          "sha256": "bf73952dc8f4dd0f2432b92ddc11b3bb4c64c2afefe5177abfc1096f4d1ea89a",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "samples/roofing_contractors.json",
+      "cid": "bafkreibmz5nhnrd3y76x7kjrb3jx2wibhgiruq3yw4qmlbwmb4reyrxbia",
+      "codec": "file",
+      "expected": {
+        "size": 37460,
+        "sha256": "2ccf5a76c47bc7fd7fa9310ed37d590139911a4378b720c586cc0f224c46e140"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafkreibmz5nhnrd3y76x7kjrb3jx2wibhgiruq3yw4qmlbwmb4reyrxbia?format=raw",
+          "bytesReceived": 37460,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 45,
+          "size": 37460,
+          "sha256": "2ccf5a76c47bc7fd7fa9310ed37d590139911a4378b720c586cc0f224c46e140",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafkreibmz5nhnrd3y76x7kjrb3jx2wibhgiruq3yw4qmlbwmb4reyrxbia?format=raw",
+          "bytesReceived": 37460,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 44,
+          "size": 37460,
+          "sha256": "2ccf5a76c47bc7fd7fa9310ed37d590139911a4378b720c586cc0f224c46e140",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafkreibmz5nhnrd3y76x7kjrb3jx2wibhgiruq3yw4qmlbwmb4reyrxbia?format=raw",
+          "bytesReceived": 37460,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 30,
+          "size": 37460,
+          "sha256": "2ccf5a76c47bc7fd7fa9310ed37d590139911a4378b720c586cc0f224c46e140",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "sources.json",
+      "cid": "bafkreidl6p43rhnue2s6plzrdobpupiytkyiiswckagjfycheroqpdlujm",
+      "codec": "file",
+      "expected": {
+        "size": 10110,
+        "sha256": "6bf3f9b89db426a5e7af311b82fa3d189ab0844ac2500c92e047245d078d744b"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafkreidl6p43rhnue2s6plzrdobpupiytkyiiswckagjfycheroqpdlujm?format=raw",
+          "bytesReceived": 10110,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 53,
+          "size": 10110,
+          "sha256": "6bf3f9b89db426a5e7af311b82fa3d189ab0844ac2500c92e047245d078d744b",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafkreidl6p43rhnue2s6plzrdobpupiytkyiiswckagjfycheroqpdlujm?format=raw",
+          "bytesReceived": 10110,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 50,
+          "size": 10110,
+          "sha256": "6bf3f9b89db426a5e7af311b82fa3d189ab0844ac2500c92e047245d078d744b",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafkreidl6p43rhnue2s6plzrdobpupiytkyiiswckagjfycheroqpdlujm?format=raw",
+          "bytesReceived": 10110,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 41,
+          "size": 10110,
+          "sha256": "6bf3f9b89db426a5e7af311b82fa3d189ab0844ac2500c92e047245d078d744b",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "tables/business.parquet",
+      "cid": "bafybeigw6gvy2jbzi3gmhitlw7w6gws7ofpdjtxpdjejgcrrbc7fhnteoy",
+      "codec": "file",
+      "expected": {
+        "size": 7644543,
+        "sha256": "d64f6bf97b4e7fec8eab8b4f8e5ffb887ab8c6799c901eaaf8aaf4025e147679"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafybeigw6gvy2jbzi3gmhitlw7w6gws7ofpdjtxpdjejgcrrbc7fhnteoy?format=car",
+          "bytesReceived": 7645361,
+          "blocksVerified": 9,
+          "status": 200,
+          "ms": 722,
+          "size": 7644543,
+          "sha256": "d64f6bf97b4e7fec8eab8b4f8e5ffb887ab8c6799c901eaaf8aaf4025e147679",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafybeigw6gvy2jbzi3gmhitlw7w6gws7ofpdjtxpdjejgcrrbc7fhnteoy?format=car",
+          "bytesReceived": 7645361,
+          "blocksVerified": 9,
+          "status": 200,
+          "ms": 712,
+          "size": 7644543,
+          "sha256": "d64f6bf97b4e7fec8eab8b4f8e5ffb887ab8c6799c901eaaf8aaf4025e147679",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafybeigw6gvy2jbzi3gmhitlw7w6gws7ofpdjtxpdjejgcrrbc7fhnteoy?format=car",
+          "bytesReceived": 7645361,
+          "blocksVerified": 9,
+          "status": 200,
+          "ms": 688,
+          "size": 7644543,
+          "sha256": "d64f6bf97b4e7fec8eab8b4f8e5ffb887ab8c6799c901eaaf8aaf4025e147679",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "tables/contractor.parquet",
+      "cid": "bafkreietv75lh3pikry7ujbhm444l377oizpndiv6vewmpymi25oaluqtu",
+      "codec": "file",
+      "expected": {
+        "size": 295816,
+        "sha256": "93affab3ede85471fa24276739c5efff7232f68d15f549663f0c46bae02e909d"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafkreietv75lh3pikry7ujbhm444l377oizpndiv6vewmpymi25oaluqtu?format=raw",
+          "bytesReceived": 295816,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 76,
+          "size": 295816,
+          "sha256": "93affab3ede85471fa24276739c5efff7232f68d15f549663f0c46bae02e909d",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafkreietv75lh3pikry7ujbhm444l377oizpndiv6vewmpymi25oaluqtu?format=raw",
+          "bytesReceived": 295816,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 68,
+          "size": 295816,
+          "sha256": "93affab3ede85471fa24276739c5efff7232f68d15f549663f0c46bae02e909d",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafkreietv75lh3pikry7ujbhm444l377oizpndiv6vewmpymi25oaluqtu?format=raw",
+          "bytesReceived": 295816,
+          "blocksVerified": 1,
+          "status": 200,
+          "ms": 59,
+          "size": 295816,
+          "sha256": "93affab3ede85471fa24276739c5efff7232f68d15f549663f0c46bae02e909d",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "tables/permit.parquet",
+      "cid": "bafybeihptva2igwfy4cth5fohrm7ecojqhkhndymgsimrpy32ldhhf2agy",
+      "codec": "file",
+      "expected": {
+        "size": 7579875,
+        "sha256": "22b0566188f96e01ee54ed3e037aad91ddc3a4e386f3b2c9b06dd88391f9e044"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafybeihptva2igwfy4cth5fohrm7ecojqhkhndymgsimrpy32ldhhf2agy?format=car",
+          "bytesReceived": 7580693,
+          "blocksVerified": 9,
+          "status": 200,
+          "ms": 867,
+          "size": 7579875,
+          "sha256": "22b0566188f96e01ee54ed3e037aad91ddc3a4e386f3b2c9b06dd88391f9e044",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafybeihptva2igwfy4cth5fohrm7ecojqhkhndymgsimrpy32ldhhf2agy?format=car",
+          "bytesReceived": 7580693,
+          "blocksVerified": 9,
+          "status": 200,
+          "ms": 878,
+          "size": 7579875,
+          "sha256": "22b0566188f96e01ee54ed3e037aad91ddc3a4e386f3b2c9b06dd88391f9e044",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafybeihptva2igwfy4cth5fohrm7ecojqhkhndymgsimrpy32ldhhf2agy?format=car",
+          "bytesReceived": 7580693,
+          "blocksVerified": 9,
+          "status": 200,
+          "ms": 845,
+          "size": 7579875,
+          "sha256": "22b0566188f96e01ee54ed3e037aad91ddc3a4e386f3b2c9b06dd88391f9e044",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    },
+    {
+      "name": "tables/property.parquet",
+      "cid": "bafybeid3otdtm5ukhwqxtmbti3jnkx4syioahjlk45wk6g3oeyuj5jdyza",
+      "codec": "file",
+      "expected": {
+        "size": 16501166,
+        "sha256": "9466dd24047dd61dbeb1e6604b7dddcdb55e4ec0994764831d8b9b80ce106260"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "url": "https://ipfs.io/ipfs/bafybeid3otdtm5ukhwqxtmbti3jnkx4syioahjlk45wk6g3oeyuj5jdyza?format=car",
+          "bytesReceived": 16502696,
+          "blocksVerified": 17,
+          "status": 200,
+          "ms": 1424,
+          "size": 16501166,
+          "sha256": "9466dd24047dd61dbeb1e6604b7dddcdb55e4ec0994764831d8b9b80ce106260",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://dweb.link",
+          "url": "https://dweb.link/ipfs/bafybeid3otdtm5ukhwqxtmbti3jnkx4syioahjlk45wk6g3oeyuj5jdyza?format=car",
+          "bytesReceived": 16502696,
+          "blocksVerified": 17,
+          "status": 200,
+          "ms": 1403,
+          "size": 16501166,
+          "sha256": "9466dd24047dd61dbeb1e6604b7dddcdb55e4ec0994764831d8b9b80ce106260",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "url": "https://trustless-gateway.link/ipfs/bafybeid3otdtm5ukhwqxtmbti3jnkx4syioahjlk45wk6g3oeyuj5jdyza?format=car",
+          "bytesReceived": 16502696,
+          "blocksVerified": 17,
+          "status": 200,
+          "ms": 1380,
+          "size": 16501166,
+          "sha256": "9466dd24047dd61dbeb1e6604b7dddcdb55e4ec0994764831d8b9b80ce106260",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 3,
+      "ok": true
+    }
+  ]
+}

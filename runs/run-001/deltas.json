@@ -1,0 +1,30 @@
+{
+  "previous_run": null,
+  "previous_root_cid": null,
+  "deltas": {
+    "property": {
+      "added": 494841,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "permit": {
+      "added": 139902,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "contractor": {
+      "added": 4958,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "business": {
+      "added": 107695,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    }
+  }
+}

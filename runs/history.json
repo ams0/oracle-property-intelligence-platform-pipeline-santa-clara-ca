@@ -99,5 +99,106 @@
       "label": "oracle-scc-latest",
       "cid": "bafkreie5gr6twt5zvxvxuajy7qv324s3qiatalq4gydmg2r5rwwtwa2xiy"
     }
+  },
+  {
+    "run_id": "run-002",
+    "created_at": "2026-10-08T13:24:16.153Z",
+    "mode": "incremental",
+    "root_cid": "bafybeidjlegqutw72gtoqpbiw7ij4xgvov232vykjhd37va7cknknsfh5e",
+    "manifest_cid": "bafkreigtk53zdxngkc7ef477touqd5sd5txdzverxtn5htsrrawhopk5uu",
+    "car_cid": "bafybeihuxkjeknuiavmi27bhzdrpekn7huerodivfsqts7v5rqg7my3e3m",
+    "counts": {
+      "property": 494841,
+      "permit": 139902,
+      "contractor": 4958,
+      "business": 107695
+    },
+    "deltas": {
+      "property": {
+        "added": 0,
+        "changed": 10,
+        "removed": 0,
+        "unchanged": 494831
+      },
+      "permit": {
+        "added": 0,
+        "changed": 6634,
+        "removed": 0,
+        "unchanged": 133268
+      },
+      "contractor": {
+        "added": 0,
+        "changed": 0,
+        "removed": 0,
+        "unchanged": 4958
+      },
+      "business": {
+        "added": 0,
+        "changed": 42,
+        "removed": 0,
+        "unchanged": 107695
+      }
+    },
+    "sources": [
+      {
+        "id": "scc_parcels",
+        "status": "ok",
+        "rows": 504717,
+        "fetchedAt": "2026-10-08T13:18:19.786Z"
+      },
+      {
+        "id": "scc_planning_parcels",
+        "status": "ok",
+        "rows": 504648,
+        "fetchedAt": "2026-10-08T13:18:19.809Z"
+      },
+      {
+        "id": "los_gatos_roll",
+        "status": "ok",
+        "rows": 18984,
+        "fetchedAt": "2026-10-08T13:18:19.810Z"
+      },
+      {
+        "id": "sj_permits",
+        "status": "ok",
+        "rows": 19763,
+        "fetchedAt": "2026-10-08T13:18:19.810Z"
+      },
+      {
+        "id": "campbell_permits",
+        "status": "ok",
+        "rows": 0,
+        "fetchedAt": "2026-10-08T13:18:19.811Z"
+      },
+      {
+        "id": "gilroy_permits",
+        "status": "ok",
+        "rows": 0,
+        "fetchedAt": "2026-10-08T13:18:19.811Z"
+      },
+      {
+        "id": "cslb_master",
+        "status": "ok",
+        "rows": 243786,
+        "fetchedAt": "2026-10-08T13:18:19.812Z"
+      },
+      {
+        "id": "overture_places",
+        "status": "ok",
+        "rows": 122713,
+        "fetchedAt": "2026-10-08T13:18:19.812Z"
+      },
+      {
+        "id": "bbb_roofers",
+        "status": "ok",
+        "rows": 158,
+        "fetchedAt": "2026-10-08T13:18:19.812Z"
+      }
+    ],
+    "ipns": {
+      "name": "k51qzi5uqu5djx0ycpstlrvrpvem0ueb9f3hn9oqfifoth37h307ncxxxx2f8l",
+      "label": "oracle-scc-latest",
+      "cid": "bafkreigtk53zdxngkc7ef477touqd5sd5txdzverxtn5htsrrawhopk5uu"
+    }
   }
 ]

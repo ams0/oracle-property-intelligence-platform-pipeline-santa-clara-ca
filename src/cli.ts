@@ -56,7 +56,7 @@ async function main() {
       break;
     }
     case "publish": {
-      const history = await readHistory();
+      const history = (await readHistory()).filter((h) => h.run_id !== runId);
       const previous = history.at(-1) ?? null;
       const publishDir = join(runDir, "publish");
       // Change detection against the previous run's published tables (read straight from IPFS).
@@ -99,7 +99,9 @@ async function main() {
     case "build": {
       const asOf = runId.match(/^\d{4}-\d{2}-\d{2}/)?.[0] ?? new Date().toISOString().slice(0, 10);
       const started = Date.now();
-      const result = await buildRun(runDir, runId, await readRecords(), asOf);
+      const previous = (await readHistory()).filter((h) => h.run_id !== runId).at(-1);
+      const previousRoot = previous ? `${process.env.ORACLE_READ_GATEWAY ?? "https://ipfs.filebase.io"}/ipfs/${previous.root_cid}` : null;
+      const result = await buildRun(runDir, runId, await readRecords(), asOf, previousRoot);
       log(`build ${runId}: ${JSON.stringify(result.counts)} in ${((Date.now() - started) / 1000).toFixed(1)}s -> ${result.outDir}`);
       break;
     }

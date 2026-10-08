@@ -24,7 +24,13 @@ export interface BuildResult {
  * Build the canonical DuckDB model from a run's raw captures and export the publishable
  * artifact directory (Parquet query tables, indexes, coverage, samples, provenance).
  */
-export async function buildRun(runDir: string, runId: string, sources: SourceRunRecord[], asOf: string): Promise<BuildResult> {
+export async function buildRun(
+  runDir: string,
+  runId: string,
+  sources: SourceRunRecord[],
+  asOf: string,
+  previousRoot: string | null = null,
+): Promise<BuildResult> {
   const dbPath = join(runDir, "oracle.duckdb");
   const outDir = join(runDir, "publish");
   await rm(dbPath, { force: true });
@@ -34,14 +40,19 @@ export async function buildRun(runDir: string, runId: string, sources: SourceRun
   await mkdir(join(outDir, "samples"), { recursive: true });
 
   const fetched = Object.fromEntries(sources.map((s) => [s.id, s.fetchedAt]));
-  const sql = (await readFile(join(SQL_DIR, "transform.sql"), "utf8"))
-    .replaceAll("{{RAW}}", join(runDir, "raw"))
-    .replaceAll("{{RUN_ID}}", runId)
-    .replaceAll("{{AS_OF}}", asOf)
-    .replace(/\{\{FETCHED\.([a-z_]+)\}\}/g, (_, id: string) => fetched[id] ?? "");
+  const render = async (file: string) =>
+    (await readFile(join(SQL_DIR, file), "utf8"))
+      .replaceAll("{{RAW}}", join(runDir, "raw"))
+      .replaceAll("{{RUN_ID}}", runId)
+      .replaceAll("{{AS_OF}}", asOf)
+      .replace(/\{\{FETCHED\.([a-z_]+)\}\}/g, (_, id: string) => fetched[id] ?? "");
+  const windowed = sources.filter((s) => s.capture?.scope === "window").map((s) => s.id);
 
   return withDuck(async (db) => {
-    await db.run(sql);
+    await db.run(await render("stage.sql"));
+    if (windowed.length && previousRoot) await carryForwardPermits(db, `${previousRoot}/tables/permit.parquet`, windowed);
+    await db.run(await render("model.sql"));
+    await db.run(await render("derive.sql"));
     const counts: Record<string, number> = {};
     for (const [name, table] of Object.entries(QUERY_TABLES)) {
       // Sort by location so DuckDB range reads over HTTP touch few row groups for radius queries.
@@ -126,4 +137,29 @@ async function coverageReport(
     contractor,
     sources: sources.map((s) => ({ id: s.id, status: s.status, rows: s.rows, fetchedAt: s.fetchedAt, durationMs: s.durationMs, limitations: s.limitations })),
   };
+}
+
+/**
+ * Windowed captures only contain recently changed permits. Carry every other permit forward from
+ * the previous run's published table (read by CID over HTTP) into permit_all, so parcel linking,
+ * contractor matching and lead signals are recomputed over a full, consistent snapshot. San Jose's
+ * Active extract is always complete, so a carried "open" San Jose permit that is no longer Active
+ * has left the Active list and is marked closed_inferred.
+ */
+async function carryForwardPermits(db: Parameters<Parameters<typeof withDuck>[0]>[0], previousPermits: string, windowed: string[]) {
+  await db.run("INSTALL httpfs; LOAD httpfs;");
+  const ids = windowed.map((id) => `'${id}'`).join(", ");
+  await db.run(`
+    CREATE OR REPLACE TABLE permit_carried AS
+    SELECT permit_key, source_id, jurisdiction, permit_number,
+           -- Only a publisher-supplied APN is carried; derived links are recomputed with their method.
+           CASE WHEN apn_basis = 'source_apn' THEN apn END AS apn,
+           address, work_type, description, is_roofing, roofing_basis,
+           status_raw,
+           CASE WHEN source_id = 'sj_permits' AND status = 'open' THEN 'closed_inferred' ELSE status END AS status,
+           applied_date, issued_date, finaled_date, expired_date, valuation, contractor_raw,
+           CAST(NULL AS VARCHAR) AS contractor_license_raw, lat, lon, source_url, fetched_at
+    FROM read_parquet('${previousPermits}')
+    WHERE source_id IN (${ids}) AND permit_key NOT IN (SELECT permit_key FROM permit_all);
+    INSERT INTO permit_all BY NAME SELECT * FROM permit_carried;`);
 }

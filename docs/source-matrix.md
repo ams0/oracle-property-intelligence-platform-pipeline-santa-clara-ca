@@ -34,6 +34,7 @@ Phase 0 discovery, probed 2026-10-08. Every source below was hit directly; count
 | Permits: Los Gatos, Morgan Hill | Monthly PDFs — parseable, stretch goal. Los Gatos is the only current source with CSLB license #. |
 | Contractor license # on permits | Not present in San Jose/Campbell/Gilroy feeds → name matching to CSLB (candidate match, flagged). |
 | CSLB Personnel file | Server cuts download at 150 s. |
+| CSLB License Master | Same server sometimes cuts the 78 MB master file at ~140–150 s (seen from GitHub runners). A strict parse plus a 200k-row floor detects truncation; the run then reuses the last complete capture, pinned on IPFS (`runs/last-good.json`), and marks the source `stale`. |
 | Socrata bulk CSV export | Deprecated (HTTP 410) → paged SODA instead. |
 | BBB | Website Cloudflare-gated; only low-volume search JSON used, with attribution. |
 | Public IPFS gateways | ipfs.io / dweb.link / w3s.link stopped serving plain HTTP on 2026-09-21 (429); trustless `?format=raw` / CAR still served. Verification uses trustless responses + digest check. |

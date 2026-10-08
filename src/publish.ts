@@ -1,13 +1,11 @@
 import { readFile, stat, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { HeadObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
-import { createReadStream } from "node:fs";
 import { packDirectory, packFile, sameContent, type PackedFile } from "./lib/ipfs.js";
-import { sha256File } from "./capture.js";
+import { sha256File } from "./lib/hash.js";
+import { BUCKET, filebase, importCar } from "./lib/filebase.js";
 
 export const PUBLIC_GATEWAYS = ["https://ipfs.io", "https://dweb.link", "https://trustless-gateway.link"] as const;
 export const IPNS_LABEL = process.env.ORACLE_IPNS_LABEL ?? "oracle-scc-latest";
-const BUCKET = process.env.FILEBASE_BUCKET ?? "prism-oracle-santa-clara";
 
 export interface ManifestObject {
   name: string;
@@ -45,32 +43,6 @@ export interface RunHistoryEntry {
   counts: Record<string, number>;
   deltas?: Record<string, { added: number; changed: number; removed: number; unchanged: number }>;
   sources: { id: string; status: string; rows: number; fetchedAt: string }[];
-}
-
-function filebase(): S3Client {
-  const accessKeyId = process.env.FILEBASE_ACCESS_KEY;
-  const secretAccessKey = process.env.FILEBASE_SECRET_KEY;
-  if (!accessKeyId || !secretAccessKey) throw new Error("FILEBASE_ACCESS_KEY / FILEBASE_SECRET_KEY are required to publish");
-  return new S3Client({ endpoint: "https://s3.filebase.com", region: "us-east-1", credentials: { accessKeyId, secretAccessKey } });
-}
-
-/** Upload a CAR through Filebase's import path and require the pinned CID to equal our root. */
-async function importCar(s3: S3Client, carPath: string, key: string, expectedRoot: string): Promise<void> {
-  const size = (await stat(carPath)).size;
-  await s3.send(
-    new PutObjectCommand({
-      Bucket: BUCKET,
-      Key: key,
-      Body: createReadStream(carPath),
-      ContentLength: size,
-      Metadata: { import: "car" },
-    }),
-  );
-  const head = await s3.send(new HeadObjectCommand({ Bucket: BUCKET, Key: key }));
-  const pinned = head.Metadata?.cid;
-  if (!pinned || !sameContent(pinned, expectedRoot)) {
-    throw new Error(`Filebase pinned ${pinned ?? "nothing"} for ${key}, expected ${expectedRoot}`);
-  }
 }
 
 const gatewayUrls = (cid: string, codec: "raw" | "dag-pb") =>

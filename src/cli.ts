@@ -12,6 +12,8 @@ const ROOT = resolve(process.env.ORACLE_DATA_DIR ?? "data");
 /** Committed, human-readable run history (manifests, coverage, verification) lives in the repo. */
 const REPO_RUNS = resolve(process.env.ORACLE_RUNS_DIR ?? "runs");
 const HISTORY = join(REPO_RUNS, "history.json");
+/** CIDs of the last complete raw capture of each flaky source (see src/snapshots.ts). */
+const SNAPSHOTS = join(REPO_RUNS, "last-good.json");
 
 const { values, positionals } = parseArgs({
   allowPositionals: true,
@@ -41,6 +43,7 @@ async function main() {
           log,
         },
         join(ROOT, "state"),
+        SNAPSHOTS,
         values.only?.split(","),
       );
       // A partial re-capture (--only) replaces just those sources in the run record.

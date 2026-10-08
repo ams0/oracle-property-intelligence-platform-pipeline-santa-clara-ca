@@ -4,7 +4,7 @@ import { join, relative, sep } from "node:path";
 import { Readable, Writable } from "node:stream";
 import { CAREncoderStream, createDirectoryEncoderStream, createFileEncoderStream, type Block, type FileLike } from "ipfs-car";
 import { CID } from "multiformats/cid";
-import { sha256File } from "../capture.js";
+import { sha256File } from "./hash.js";
 
 export interface PackedFile {
   path: string;

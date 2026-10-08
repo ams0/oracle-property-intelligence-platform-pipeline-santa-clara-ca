@@ -214,6 +214,7 @@ export const SOURCES: SourceDescriptor[] = [
       "~78 MB single download with no Range/compression support; the server cuts responses at ~150 s when throttled, so a run may reuse the last complete snapshot (status 'stale').",
       "County field is the self-reported mailing county.",
     ],
+    snapshot: "ipfs",
     async fetch(ctx, stats) {
       const file = join(ctx.rawDir, "cslb_master.csv");
       await writeFile(file, await fetchText(CSLB_MASTER, stats));

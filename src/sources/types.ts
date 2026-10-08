@@ -23,6 +23,11 @@ export interface SourceDescriptor {
   jurisdictions: string[];
   /** Known constraints, carried into the run summary verbatim. */
   limitations: string[];
+  /**
+   * Pin each complete capture to IPFS (registry: runs/last-good.json) so a run on a fresh
+   * machine can fall back to it by CID. Set for publishers that throttle or truncate.
+   */
+  snapshot?: "ipfs";
   fetch(ctx: SourceContext, stats: FetchStats): Promise<CaptureResult>;
 }
 

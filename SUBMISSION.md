@@ -46,6 +46,7 @@ Every row carries `source_id`, `source_url`, `fetched_at` and `run_id`. The full
    - Reference tables are re-pulled in full.
    - Every capture records its row count, bytes, retries and duration.
    - If a publisher throttles or truncates (CSLB cuts downloads at about 150 s), the pipeline falls back to the **last good snapshot** and the source is marked `stale`. The run doesn't fail and data is never silently dropped.
+   - For flaky sources, that last good raw capture is itself **pinned on IPFS**. Its CID and sha256 are in the committed [`runs/last-good.json`](runs/last-good.json), so a fresh CI runner with no local state can still fall back: it fetches the snapshot by CID and verifies it byte-for-byte. The run record names the snapshot CID it used.
 2. **Build.** DuckDB SQL (`src/sql/*.sql`) stages, models and derives the tables.
    - In incremental runs, permits not in the window are **carried forward from the previous run's `permit.parquet`, read by CID**.
    - Permits that left San Jose's Active list become `closed_inferred`.

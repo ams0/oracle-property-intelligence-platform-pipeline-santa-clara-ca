@@ -4,12 +4,28 @@ import { exporter } from "ipfs-unixfs-exporter";
 import { CID } from "multiformats/cid";
 import { sha256 } from "multiformats/hashes/sha2";
 
-/** Public gateways this project does not operate. Requests use trustless formats (raw / CAR). */
-export const PUBLIC_GATEWAYS = ["https://ipfs.io", "https://dweb.link", "https://trustless-gateway.link"];
+/**
+ * Public gateways this project does not operate, with who runs them. ipfs.io, dweb.link and
+ * trustless-gateway.link share one operator (and the first two now redirect to the third), so
+ * "independent" is counted by operator, not hostname. Requests use trustless formats (raw / CAR).
+ */
+export const PUBLIC_GATEWAYS = [
+  { url: "https://ipfs.io", operator: "IPFS Foundation" },
+  { url: "https://dweb.link", operator: "IPFS Foundation" },
+  { url: "https://trustless-gateway.link", operator: "IPFS Foundation" },
+  { url: "https://gateway.pinata.cloud", operator: "Pinata" },
+  { url: "https://ipfs.orbitor.dev", operator: "orbitor.dev" },
+] as const;
+export type PublicGateway = { url: string; operator: string };
+/** Distinct operators that must independently serve matching bytes. */
+export const MIN_INDEPENDENT_OPERATORS = 2;
 
 export interface GatewayCheck {
   gateway: string;
+  operator: string;
   url: string;
+  /** Host that actually answered, after redirects. */
+  servedBy?: string;
   status: number | "error";
   ms: number;
   bytesReceived: number;
@@ -26,20 +42,21 @@ export interface GatewayCheck {
  * root-block level (dag-scope=block).
  */
 export async function checkOnGateway(
-  gateway: string,
+  { url: gateway, operator }: PublicGateway,
   obj: { cid: string; size: number; sha256: string; codec: string; ipld_codec: string },
   timeoutMs = 45_000,
 ): Promise<GatewayCheck> {
   const format = obj.ipld_codec === "raw" ? "raw" : "car";
   const url = `${gateway}/ipfs/${obj.cid}?format=${format}${obj.codec === "directory" ? "&dag-scope=block" : ""}`;
   const started = Date.now();
-  const base = { gateway, url, bytesReceived: 0, blocksVerified: 0 };
+  const base: Pick<GatewayCheck, "gateway" | "operator" | "url" | "servedBy" | "bytesReceived" | "blocksVerified"> = { gateway, operator, url, bytesReceived: 0, blocksVerified: 0 };
   try {
     const res = await fetch(url, {
       headers: { accept: format === "raw" ? "application/vnd.ipld.raw" : "application/vnd.ipld.car" },
       signal: AbortSignal.timeout(timeoutMs),
       cache: "no-store",
     });
+    base.servedBy = new URL(res.url || url).host;
     if (!res.ok) return { ...base, status: res.status, ms: Date.now() - started, ok: false, error: (await res.text()).slice(0, 160) };
     const bytes = new Uint8Array(await res.arrayBuffer());
     const ms = Date.now() - started;

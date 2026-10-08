@@ -113,8 +113,10 @@ SELECT
     p.city,
     p.zip,
     p.jurisdiction,
-    ST_Y(ST_Centroid(p.geom)) AS lat,
-    ST_X(ST_Centroid(p.geom)) AS lon,
+    -- Rounded to ~1 cm: centroid float noise differs across CPU architectures and would
+    -- otherwise show up as spurious per-run coordinate deltas.
+    round(ST_Y(ST_Centroid(p.geom)), 7) AS lat,
+    round(ST_X(ST_Centroid(p.geom)), 7) AS lon,
     p.source_rows AS parcel_source_rows,
     pl.year_built,
     pl.last_document_number,

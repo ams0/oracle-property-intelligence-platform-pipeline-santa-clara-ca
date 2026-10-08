@@ -4,11 +4,15 @@ import { exporter } from "ipfs-unixfs-exporter";
 import { CID } from "multiformats/cid";
 import { sha256 } from "multiformats/hashes/sha2";
 import type { Manifest, ManifestObject } from "./publish.js";
-import { PUBLIC_GATEWAYS } from "./publish.js";
+import { mapLimit } from "./lib/http.js";
+import { MIN_INDEPENDENT_OPERATORS, PUBLIC_GATEWAYS, type PublicGateway } from "./publish.js";
 
 export interface GatewayCheck {
   gateway: string;
+  operator: string;
   url: string;
+  /** Host that actually answered, after redirects. */
+  servedBy?: string;
   status: number | "error";
   ms: number;
   bytesReceived: number;
@@ -28,6 +32,8 @@ export interface ObjectVerification {
   expected: { size: number; sha256: string };
   checks: GatewayCheck[];
   independentGatewaysOk: number;
+  /** Distinct operators whose gateways returned matching bytes. */
+  independentOperatorsOk: number;
   ok: boolean;
 }
 
@@ -36,17 +42,18 @@ export interface ObjectVerification {
  * (raw block or CAR), verify every block hashes to its CID, then rebuild the UnixFS file and
  * compare size + SHA-256 with the manifest. Nothing here trusts the gateway's word.
  */
-export async function checkOnGateway(gateway: string, obj: ManifestObject, timeoutMs = 120_000): Promise<GatewayCheck> {
+export async function checkOnGateway({ url: gateway, operator }: PublicGateway, obj: ManifestObject, timeoutMs = 120_000): Promise<GatewayCheck> {
   const format = obj.ipld_codec === "raw" ? "raw" : "car";
   const scope = obj.codec === "directory" ? "&dag-scope=block" : "";
   const url = `${gateway}/ipfs/${obj.cid}?format=${format}${scope}`;
   const started = Date.now();
-  const base = { gateway, url, bytesReceived: 0, blocksVerified: 0 };
+  const base: Pick<GatewayCheck, "gateway" | "operator" | "url" | "servedBy" | "bytesReceived" | "blocksVerified"> = { gateway, operator, url, bytesReceived: 0, blocksVerified: 0 };
   try {
     const res = await fetch(url, {
       headers: { accept: format === "raw" ? "application/vnd.ipld.raw" : "application/vnd.ipld.car" },
       signal: AbortSignal.timeout(timeoutMs),
     });
+    base.servedBy = new URL(res.url || url).host;
     if (!res.ok) {
       return { ...base, status: res.status, ms: Date.now() - started, ok: false, error: (await res.text()).slice(0, 160) };
     }
@@ -110,22 +117,23 @@ export async function checkOnGateway(gateway: string, obj: ManifestObject, timeo
 
 export async function verifyManifest(
   manifest: Manifest,
-  { gateways = [...PUBLIC_GATEWAYS], only }: { gateways?: string[]; only?: (o: ManifestObject) => boolean } = {},
+  { gateways = [...PUBLIC_GATEWAYS], only }: { gateways?: PublicGateway[]; only?: (o: ManifestObject) => boolean } = {},
 ): Promise<ObjectVerification[]> {
   const targets = [manifest.root.car, ...manifest.objects.filter((o) => o.codec !== "car")].filter((o) => !only || only(o));
-  const out: ObjectVerification[] = [];
-  for (const obj of targets) {
+  // Objects in parallel (bounded): one unreachable gateway costs a full timeout per object.
+  return mapLimit(targets, 6, async (obj): Promise<ObjectVerification> => {
     const checks = await Promise.all(gateways.map((g) => checkOnGateway(g, obj)));
     const okCount = checks.filter((c) => c.ok).length;
-    out.push({
+    const operatorsOk = new Set(checks.filter((c) => c.ok).map((c) => c.operator)).size;
+    return {
       name: obj.path,
       cid: obj.cid,
       codec: obj.codec,
       expected: { size: obj.size, sha256: obj.sha256 },
       checks,
       independentGatewaysOk: okCount,
-      ok: okCount >= 2,
-    });
-  }
-  return out;
+      independentOperatorsOk: operatorsOk,
+      ok: operatorsOk >= MIN_INDEPENDENT_OPERATORS,
+    };
+  });
 }

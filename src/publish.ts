@@ -4,7 +4,21 @@ import { packDirectory, packFile, sameContent, type PackedFile } from "./lib/ipf
 import { sha256File } from "./lib/hash.js";
 import { BUCKET, filebase, importCar } from "./lib/filebase.js";
 
-export const PUBLIC_GATEWAYS = ["https://ipfs.io", "https://dweb.link", "https://trustless-gateway.link"] as const;
+/**
+ * Public gateways this project does not operate, with who runs them. ipfs.io, dweb.link and
+ * trustless-gateway.link share one operator (and the first two now redirect to the third), so
+ * "independent" is counted by operator, not hostname. Requests use trustless formats (raw / CAR).
+ */
+export const PUBLIC_GATEWAYS = [
+  { url: "https://ipfs.io", operator: "IPFS Foundation" },
+  { url: "https://dweb.link", operator: "IPFS Foundation" },
+  { url: "https://trustless-gateway.link", operator: "IPFS Foundation" },
+  { url: "https://gateway.pinata.cloud", operator: "Pinata" },
+  { url: "https://ipfs.orbitor.dev", operator: "orbitor.dev" },
+] as const;
+export type PublicGateway = { url: string; operator: string };
+/** Distinct operators that must independently serve matching bytes. */
+export const MIN_INDEPENDENT_OPERATORS = 2;
 export const IPNS_LABEL = process.env.ORACLE_IPNS_LABEL ?? "oracle-scc-latest";
 
 export interface ManifestObject {
@@ -46,7 +60,7 @@ export interface RunHistoryEntry {
 }
 
 const gatewayUrls = (cid: string, codec: "raw" | "dag-pb") =>
-  PUBLIC_GATEWAYS.map((g) => `${g}/ipfs/${cid}?format=${codec === "raw" ? "raw" : "car"}`);
+  PUBLIC_GATEWAYS.map((g) => `${g.url}/ipfs/${cid}?format=${codec === "raw" ? "raw" : "car"}`);
 
 async function filebaseToken(): Promise<string> {
   return Buffer.from(`${process.env.FILEBASE_ACCESS_KEY}:${process.env.FILEBASE_SECRET_KEY}`).toString("base64");

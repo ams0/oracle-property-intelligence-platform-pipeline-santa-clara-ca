@@ -16,7 +16,7 @@ export function HistoryPanel({ data }: { data: RunData }) {
     const j = await res.json();
     setChecks((c) => ({
       ...c,
-      [rootCid]: `${j.gateways_ok}/3 public gateways serve the root block (${j.checks.map((x: { gateway: string; status: number }) => `${new URL(x.gateway).host} ${x.status}`).join(", ")})`,
+      [rootCid]: `${j.operators_ok} independent operators (${j.gateways_ok}/${j.gateways_checked} public gateways) serve the root block (${j.checks.map((x: { gateway: string; status: number }) => `${new URL(x.gateway).host} ${x.status}`).join(", ")})`,
     }));
   }
 

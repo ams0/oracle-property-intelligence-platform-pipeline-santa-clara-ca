@@ -35,11 +35,14 @@ export async function computeDeltas(publishDir: string, previousBase: string | n
       // Hash only columns present in both snapshots and not volatile, so schema additions do not
       // mark every row as changed.
       const cols = async (src: string) =>
-        (await queryRows<{ column_name: string }>(db, `DESCRIBE SELECT * FROM '${src}'`)).map((c) => c.column_name);
-      const prevCols = new Set(await cols(prev));
-      const stable = (await cols(cur)).filter((c) => prevCols.has(c) && !VOLATILE.includes(c));
+        await queryRows<{ column_name: string; column_type: string }>(db, `DESCRIBE SELECT * FROM '${src}'`);
+      const prevCols = new Set((await cols(prev)).map((c) => c.column_name));
+      const stable = (await cols(cur)).filter((c) => prevCols.has(c.column_name) && !VOLATILE.includes(c.column_name));
+      // Floats are compared at 7 decimals so cross-platform rounding noise is not a "change".
+      const expr = (c: { column_name: string; column_type: string }) =>
+        /^(DOUBLE|FLOAT|REAL)$/.test(c.column_type) ? `round("${c.column_name}", 7)` : `"${c.column_name}"`;
       const hashOf = (src: string) =>
-        `SELECT ${key} AS k, md5(to_json(struct_pack(${stable.map((c) => `"${c}" := "${c}"`).join(", ")}))::VARCHAR) AS h FROM '${src}'`;
+        `SELECT ${key} AS k, md5(to_json(struct_pack(${stable.map((c) => `"${c.column_name}" := ${expr(c)}`).join(", ")}))::VARCHAR) AS h FROM '${src}'`;
       const [r] = await queryRows<Record<string, number>>(
         db,
         `WITH c AS (${hashOf(cur)}), p AS (${hashOf(prev)})

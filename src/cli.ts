@@ -95,7 +95,7 @@ async function main() {
       const out = { run_id: runId, verified_at: new Date().toISOString(), all_ok: report.every((r) => r.ok), objects: report };
       await mkdir(join(REPO_RUNS, runId), { recursive: true });
       await writeFile(join(REPO_RUNS, runId, "verification.json"), JSON.stringify(out, null, 2));
-      console.table(report.map((r) => ({ object: r.name, cid: r.cid.slice(0, 18) + "…", ok: r.ok, gateways_ok: r.independentGatewaysOk, ...Object.fromEntries(r.checks.map((c) => [new URL(c.gateway).host, `${c.status}${c.ok ? " ✓" : ""}`])) })));
+      console.table(report.map((r) => ({ object: r.name, cid: r.cid.slice(0, 18) + "…", ok: r.ok, operators_ok: r.independentOperatorsOk, ...Object.fromEntries(r.checks.map((c) => [new URL(c.gateway).host, `${c.status}${c.ok ? " ✓" : ""}`])) })));
       if (!out.all_ok) process.exitCode = 2;
       break;
     }

@@ -5,6 +5,8 @@ import { bytes, short, type ManifestObject, type RunData } from "./types";
 
 interface Check {
   gateway: string;
+  operator: string;
+  servedBy?: string;
   url: string;
   status: number | string;
   ms: number;
@@ -15,7 +17,7 @@ interface Check {
 }
 
 export function ManifestPanel({ data }: { data: RunData }) {
-  const [results, setResults] = useState<Record<string, { ok: boolean; gateways_ok: number; checks: Check[]; checked_at: string } | "pending">>({});
+  const [results, setResults] = useState<Record<string, { ok: boolean; gateways_ok: number; gateways_checked: number; operators_ok: number; checks: Check[]; checked_at: string } | "pending">>({});
   const m = data.manifest;
   const objects: ManifestObject[] = [
     { ...m.root.car, name: "(run root directory)", path: "/", cid: m.root.cid, codec: "directory", ipld_codec: "dag-pb", sha256: "", size: 0, gateway_urls: [] },
@@ -83,14 +85,14 @@ export function ManifestPanel({ data }: { data: RunData }) {
                   <td>{o.size ? bytes(o.size) : "—"}</td>
                   <td className="mono" title={o.sha256}>{o.sha256 ? `${o.sha256.slice(0, 12)}…` : "—"}</td>
                   <td>
-                    {!r && <button className="ghost" onClick={() => verify(o)}>Fetch from ipfs.io + dweb.link + trustless-gateway.link</button>}
+                    {!r && <button className="ghost" onClick={() => verify(o)}>Fetch from 5 public gateways (3 operators)</button>}
                     {r === "pending" && <span className="muted">fetching by CID and hashing…</span>}
                     {r && r !== "pending" && (
                       <div>
-                        <span className={`pill ${r.ok ? "ok" : "bad"}`}>{r.gateways_ok}/3 gateways match</span>
+                        <span className={`pill ${r.ok ? "ok" : "bad"}`}>{r.operators_ok} independent operators · {r.gateways_ok}/{r.gateways_checked} gateways match</span>
                         {r.checks.map((c) => (
                           <div key={c.gateway} className="muted mono">
-                            {new URL(c.gateway).host}: {String(c.status)} · {c.ms} ms
+                            {new URL(c.gateway).host}{c.servedBy && c.servedBy !== new URL(c.gateway).host ? ` → ${c.servedBy}` : ""} ({c.operator}): {String(c.status)} · {c.ms} ms
                             {c.size != null ? ` · ${bytes(c.size)} · sha256 ${c.sha256?.slice(0, 10)}… ${c.ok ? "✓" : "✗"}` : c.ok ? " · root block ✓" : ` ✗ ${c.error ?? ""}`}
                           </div>
                         ))}

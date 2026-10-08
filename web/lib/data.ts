@@ -5,6 +5,7 @@ import { DuckDBInstance, type DuckDBConnection } from "@duckdb/node-api";
 import { CID } from "multiformats/cid";
 import * as raw from "multiformats/codecs/raw";
 import { sha256 } from "multiformats/hashes/sha2";
+import { resolveIpns, type IpnsResolution } from "./ipns";
 
 /** IPNS name the pipeline re-points at each run's manifest. */
 export const IPNS_NAME = process.env.ORACLE_IPNS ?? "k51qzi5uqu5djx0ycpstlrvrpvem0ueb9f3hn9oqfifoth37h307ncxxxx2f8l";
@@ -38,8 +39,9 @@ export interface Manifest {
 export interface Dataset {
   manifest: Manifest;
   manifestCid: string;
-  /** How the manifest was found: IPNS resolution, or a pinned CID override. */
-  resolvedVia: "ipns" | "pinned_cid";
+  /** How the manifest was found: verified IPNS record, gateway IPNS fallback, or a pinned CID override. */
+  resolvedVia: "ipns_record" | "ipns_gateway" | "pinned_cid";
+  ipns: IpnsResolution | null;
   loadedAt: string;
   verified: { path: string; cid: string; sha256: string; size: number; ok: boolean }[];
   db: DuckDBConnection;
@@ -60,14 +62,20 @@ async function fetchBytes(url: string, timeoutMs = 60_000): Promise<Uint8Array> 
 }
 
 /** Resolve the current manifest: pinned CID if configured, else the IPNS pointer. */
-export async function resolveManifest(): Promise<{ manifest: Manifest; manifestCid: string; resolvedVia: Dataset["resolvedVia"] }> {
-  const pinned = process.env.ORACLE_MANIFEST_CID;
-  const bytes = pinned
-    ? await fetchBytes(`${READ_GATEWAY}/ipfs/${pinned}`)
-    : await fetchBytes(`${READ_GATEWAY}/ipns/${IPNS_NAME}`);
+export async function resolveManifest(): Promise<{ manifest: Manifest; manifestCid: string; resolvedVia: Dataset["resolvedVia"]; ipns: IpnsResolution | null }> {
+  let target = process.env.ORACLE_MANIFEST_CID ?? null;
+  let resolvedVia: Dataset["resolvedVia"] = "pinned_cid";
+  let ipns: IpnsResolution | null = null;
+  if (!target) {
+    ipns = await resolveIpns(IPNS_NAME).catch(() => null);
+    target = ipns?.cid ?? null;
+    resolvedVia = ipns ? "ipns_record" : "ipns_gateway";
+  }
+  const bytes = target ? await fetchBytes(`${READ_GATEWAY}/ipfs/${target}`) : await fetchBytes(`${READ_GATEWAY}/ipns/${IPNS_NAME}`);
   const manifestCid = await manifestCidOf(bytes);
-  if (pinned && manifestCid !== CID.parse(pinned).toV1().toString()) throw new Error(`manifest bytes do not match ${pinned}`);
-  return { manifest: JSON.parse(new TextDecoder().decode(bytes)) as Manifest, manifestCid, resolvedVia: pinned ? "pinned_cid" : "ipns" };
+  // The manifest is a single raw block, so its CID can be recomputed from the bytes and checked.
+  if (target && manifestCid !== CID.parse(target).toV1().toString()) throw new Error(`manifest bytes do not match ${target}`);
+  return { manifest: JSON.parse(new TextDecoder().decode(bytes)) as Manifest, manifestCid, resolvedVia, ipns };
 }
 
 /** Download an artifact by CID into the local cache, verifying size + SHA-256 against the manifest. */
@@ -88,7 +96,7 @@ async function materialize(obj: ManifestObject): Promise<{ file: string; ok: boo
 const TABLES = ["property", "permit", "contractor", "business"] as const;
 
 async function load(): Promise<Dataset> {
-  const { manifest, manifestCid, resolvedVia } = await resolveManifest();
+  const { manifest, manifestCid, resolvedVia, ipns } = await resolveManifest();
   const wanted = manifest.objects.filter((o) => o.codec === "file" && (o.path.startsWith("tables/") || o.path === "indexes/property_geo.parquet"));
   const verified: Dataset["verified"] = [];
   const files: Record<string, string> = {};
@@ -112,7 +120,7 @@ async function load(): Promise<Dataset> {
       3958.8 * 2 * asin(sqrt(pow(sin(radians(lat2 - lat1) / 2), 2)
         + cos(radians(lat1)) * cos(radians(lat2)) * pow(sin(radians(lon2 - lon1) / 2), 2)));
   `);
-  return { manifest, manifestCid, resolvedVia, loadedAt: new Date().toISOString(), verified, db };
+  return { manifest, manifestCid, resolvedVia, ipns, loadedAt: new Date().toISOString(), verified, db };
 }
 
 /** Shared dataset handle; reloads when the IPNS pointer moves to a new manifest (checked every TTL). */

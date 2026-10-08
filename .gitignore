@@ -4,3 +4,4 @@ data/
 .env*
 *.duckdb
 *.duckdb.wal
+.vercel/

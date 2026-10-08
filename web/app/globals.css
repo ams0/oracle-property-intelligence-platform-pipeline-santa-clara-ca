@@ -1,0 +1,73 @@
+:root {
+  --bg: #f7f7f4;
+  --panel: #ffffff;
+  --ink: #1c1f24;
+  --muted: #5d6470;
+  --line: #e2e2dc;
+  --accent: #b4441b;
+  --accent-soft: #fbeee7;
+  --ok: #2f7a3e;
+  --ok-soft: #e8f4ea;
+  --warn: #9a6a00;
+  --warn-soft: #fbf3dd;
+  --bad: #a3271f;
+  --bad-soft: #fbe9e7;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a;
+    --panel: #1d2024;
+    --ink: #e9e9e4;
+    --muted: #9aa1ab;
+    --line: #2e3238;
+    --accent: #f08a5d;
+    --accent-soft: #3a261d;
+    --ok: #7cc78b;
+    --ok-soft: #1e3123;
+    --warn: #e2b54a;
+    --warn-soft: #3a311b;
+    --bad: #f08a80;
+    --bad-soft: #3b2120;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; }
+a { color: var(--accent); }
+code, .mono { font-family: var(--mono); font-size: 12px; }
+header.top { display: flex; align-items: baseline; gap: 16px; padding: 18px 24px 8px; flex-wrap: wrap; }
+header.top h1 { font-size: 20px; margin: 0; }
+header.top .sub { color: var(--muted); }
+nav.tabs { display: flex; gap: 4px; padding: 0 24px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+nav.tabs button { background: none; border: none; border-bottom: 2px solid transparent; padding: 10px 12px; font: inherit; color: var(--muted); cursor: pointer; white-space: nowrap; }
+nav.tabs button.on { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+main { padding: 20px 24px 60px; max-width: 1400px; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.card h3 { margin: 0 0 8px; font-size: 13px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.big { font-size: 26px; font-weight: 650; }
+.muted { color: var(--muted); }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; color: var(--muted); font-weight: 600; position: sticky; top: 0; background: var(--panel); }
+.scroll { overflow: auto; max-height: 520px; }
+.pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.pill.ok { background: var(--ok-soft); color: var(--ok); }
+.pill.warn { background: var(--warn-soft); color: var(--warn); }
+.pill.bad { background: var(--bad-soft); color: var(--bad); }
+.pill.neutral { background: var(--accent-soft); color: var(--accent); }
+button.act { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 6px 12px; font: inherit; font-weight: 600; cursor: pointer; }
+button.act:disabled { opacity: .5; cursor: progress; }
+button.ghost { background: none; border: 1px solid var(--line); color: var(--ink); border-radius: 6px; padding: 4px 10px; font: inherit; cursor: pointer; }
+input, select, textarea { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; }
+textarea { width: 100%; font-family: var(--mono); font-size: 12px; }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.split { display: grid; grid-template-columns: minmax(320px, 1fr) minmax(360px, 1.2fr); gap: 16px; }
+@media (max-width: 900px) { .split { grid-template-columns: 1fr; } main { padding: 16px; } header.top, nav.tabs { padding-left: 16px; padding-right: 16px; } }
+.map { height: 560px; border-radius: 10px; border: 1px solid var(--line); overflow: hidden; }
+pre { white-space: pre-wrap; word-break: break-word; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px; font-size: 12px; max-height: 420px; overflow: auto; }
+.section { margin-top: 20px; }
+.section > h2 { font-size: 15px; margin: 0 0 10px; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; word-break: break-all; }

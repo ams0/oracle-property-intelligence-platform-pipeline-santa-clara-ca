@@ -1,0 +1,63 @@
+name: oracle-ingest
+
+# Continuous ingestion with no Oracle-hosted infrastructure: a scheduled runner captures the
+# sources, rebuilds the DuckDB model, publishes new immutable CIDs to IPFS (Filebase), moves the
+# IPNS pointer, verifies every object on independent public gateways and commits run history.
+on:
+  schedule:
+    - cron: "17 9 * * *" # daily, 09:17 UTC
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "full or incremental"
+        default: incremental
+        required: true
+
+concurrency:
+  group: oracle-ingest
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      FILEBASE_ACCESS_KEY: ${{ secrets.FILEBASE_ACCESS_KEY }}
+      FILEBASE_SECRET_KEY: ${{ secrets.FILEBASE_SECRET_KEY }}
+      ORACLE_DATA_DIR: ${{ github.workspace }}/.data
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+      - name: Restore last-good source snapshots (fallback when a publisher throttles)
+        uses: actions/cache@v4
+        with:
+          path: .data/state
+          key: oracle-state-${{ github.run_id }}
+          restore-keys: oracle-state-
+      - name: Run pipeline
+        run: |
+          RUN_ID="$(date -u +%Y-%m-%dT%H%MZ)"
+          MODE="${{ github.event.inputs.mode || 'incremental' }}"
+          SINCE="$(date -u -d '3 days ago' +%Y-%m-%d)"
+          pnpm pipeline capture --run "$RUN_ID" --mode "$MODE" --since "$SINCE"
+          pnpm pipeline build --run "$RUN_ID"
+          pnpm pipeline publish --run "$RUN_ID" --mode "$MODE"
+          # Public gateways can lag a fresh announcement; retry verification for up to ~20 min.
+          for i in 1 2 3 4 5; do pnpm pipeline verify --run "$RUN_ID" && break; sleep 240; done
+      - name: Commit run history
+        run: |
+          git config user.name "oracle-pipeline"
+          git config user.email "oracle-pipeline@users.noreply.github.com"
+          git add runs/
+          git commit -m "Run history: $(ls -t runs | head -1)" || echo "nothing to commit"
+          git push

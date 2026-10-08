@@ -8,7 +8,7 @@
   "scripts": {
     "pipeline": "tsx src/cli.ts",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "vitest run test",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -27,5 +27,6 @@
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^5.0.3"
-  }
+  },
+  "packageManager": "pnpm@12.4.2"
 }

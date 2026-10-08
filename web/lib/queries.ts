@@ -5,7 +5,9 @@ export type Row = Record<string, unknown>;
 
 async function rows(sql: string, params: Record<string, DuckDBValue> = {}): Promise<Row[]> {
   const { db } = await getDataset();
-  const reader = await db.runAndReadAll(sql, params);
+  // DuckDB rejects named parameters a statement does not reference, so bind only those used.
+  const used = Object.fromEntries(Object.entries(params).filter(([k]) => new RegExp(`\\$${k}\\b`).test(sql)));
+  const reader = await db.runAndReadAll(sql, used);
   return reader.getRowObjectsJson() as Row[];
 }
 
@@ -107,34 +109,35 @@ export interface PermitSearch {
 
 export async function openRoofingPermits(s: PermitSearch) {
   const statuses = s.includeExpiredUnfinaled ? "('open', 'expired_not_finaled')" : "('open')";
-  const where = [`is_roofing`, `status IN ${statuses}`];
+  const where = ["p.is_roofing", `p.status IN ${statuses}`];
   const params: Record<string, DuckDBValue> = { lim: Math.min(s.limit ?? 50, 500) };
+  let distance = "CAST(NULL AS DOUBLE)";
   if (s.center && s.radiusMiles) {
     Object.assign(params, bbox(s.center, s.radiusMiles), { clat: s.center.lat, clon: s.center.lon, r: s.radiusMiles });
-    where.push("lat BETWEEN $lat0 AND $lat1", "lon BETWEEN $lon0 AND $lon1", "miles($clat, $clon, lat, lon) <= $r");
+    where.push("p.lat BETWEEN $lat0 AND $lat1", "p.lon BETWEEN $lon0 AND $lon1", "miles($clat, $clon, p.lat, p.lon) <= $r");
+    distance = "round(miles($clat, $clon, p.lat, p.lon), 2)";
   }
   if (s.minDaysOpen != null) {
-    where.push("days_open >= $days");
+    where.push("p.days_open >= $days");
     params.days = s.minDaysOpen;
   }
-  const distance = s.center ? "round(miles($clat, $clon, lat, lon), 2)" : "NULL";
   const filter = where.join(" AND ");
   const [summary] = await rows(
-    `SELECT count(*) AS matches, count(contractor_license_number) AS with_cslb_contractor,
-            count(contractor_bbb_rating) AS with_bbb_rating, max(days_open) AS max_days_open
-     FROM permit WHERE ${filter}`,
+    `SELECT count(*) AS matches, count(p.contractor_license_number) AS with_cslb_contractor,
+            count(p.contractor_bbb_rating) AS with_bbb_rating, max(p.days_open) AS max_days_open
+     FROM permit p WHERE ${filter}`,
     params,
   );
   const results = await rows(
     `SELECT p.permit_key, p.permit_number, p.jurisdiction, p.apn, p.address, round(p.lat, 6) AS lat, round(p.lon, 6) AS lon,
-            ${distance.replaceAll("lat", "p.lat").replaceAll("lon", "p.lon").replace("$cp.lat", "$clat").replace("$cp.lon", "$clon")} AS distance_miles,
+            ${distance} AS distance_miles,
             p.status, p.status_raw, p.issued_date, p.days_open, round(p.days_open / 365.25, 1) AS years_open,
             p.work_type, p.description, p.roofing_basis, p.valuation,
             p.contractor_raw, p.contractor_name, p.contractor_license_number, p.contractor_match_method,
             p.contractor_bbb_rating, p.contractor_bbb_accredited, c.bbb_url, c.license_status, c.phone AS contractor_phone,
             p.source_id, p.source_url, p.fetched_at
      FROM permit p LEFT JOIN contractor c ON c.license_number = p.contractor_license_number
-     WHERE ${filter.replaceAll("lat BETWEEN", "p.lat BETWEEN").replaceAll("lon BETWEEN", "p.lon BETWEEN").replace("miles($clat, $clon, lat, lon)", "miles($clat, $clon, p.lat, p.lon)").replace("days_open >=", "p.days_open >=").replace("status IN", "p.status IN")}
+     WHERE ${filter}
      ORDER BY p.days_open DESC NULLS LAST
      LIMIT $lim`,
     params,

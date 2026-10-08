@@ -306,5 +306,106 @@
       "The CI verify step hit a public-gateway outage (ipfs.io/dweb.link 429, trustless-gateway.link 522 for all CIDs, including earlier verified ones) and the job timed out before committing history. This entry was recovered from the run’s own published files by CID; verification.json was produced afterwards.",
       "The property \"changed\" count (279,748) is cross-platform float noise in centroid lat/lon (< 1e-12°, arm64 vs x86). From the next run on, centroids are rounded to 7 decimals and deltas compare floats at that precision."
     ]
+  },
+  {
+    "run_id": "2026-10-08T2011Z",
+    "created_at": "2026-10-08T20:14:06.381Z",
+    "mode": "incremental",
+    "root_cid": "bafybeifthzi4a6tcrs47jrhnxf653k6lni3ycoblobjhbcahfarytdxhbe",
+    "manifest_cid": "bafkreibz7jkwc4snaesyj7eyffuyxggnlutkthpq3nejy6hlnpy6neid7e",
+    "car_cid": "bafybeig6zf3o24vjt4mgfb2rr7jrh2sqh52ogujtdwtzqhzbaifb7hw73y",
+    "counts": {
+      "property": 494841,
+      "permit": 139902,
+      "contractor": 4958,
+      "business": 107675
+    },
+    "deltas": {
+      "property": {
+        "added": 0,
+        "changed": 6,
+        "removed": 0,
+        "unchanged": 494835
+      },
+      "permit": {
+        "added": 0,
+        "changed": 73,
+        "removed": 0,
+        "unchanged": 139829
+      },
+      "contractor": {
+        "added": 0,
+        "changed": 0,
+        "removed": 0,
+        "unchanged": 4958
+      },
+      "business": {
+        "added": 0,
+        "changed": 0,
+        "removed": 0,
+        "unchanged": 107675
+      }
+    },
+    "sources": [
+      {
+        "id": "scc_parcels",
+        "status": "ok",
+        "rows": 504717,
+        "fetchedAt": "2026-10-08T20:11:44.078Z"
+      },
+      {
+        "id": "scc_planning_parcels",
+        "status": "ok",
+        "rows": 504648,
+        "fetchedAt": "2026-10-08T20:11:44.101Z"
+      },
+      {
+        "id": "los_gatos_roll",
+        "status": "ok",
+        "rows": 18984,
+        "fetchedAt": "2026-10-08T20:11:44.102Z"
+      },
+      {
+        "id": "sj_permits",
+        "status": "ok",
+        "rows": 19763,
+        "fetchedAt": "2026-10-08T20:11:44.103Z"
+      },
+      {
+        "id": "campbell_permits",
+        "status": "ok",
+        "rows": 0,
+        "fetchedAt": "2026-10-08T20:11:44.105Z"
+      },
+      {
+        "id": "gilroy_permits",
+        "status": "ok",
+        "rows": 0,
+        "fetchedAt": "2026-10-08T20:11:44.106Z"
+      },
+      {
+        "id": "cslb_master",
+        "status": "ok",
+        "rows": 243786,
+        "fetchedAt": "2026-10-08T20:11:44.107Z"
+      },
+      {
+        "id": "overture_places",
+        "status": "ok",
+        "rows": 122713,
+        "fetchedAt": "2026-10-08T20:11:44.108Z"
+      },
+      {
+        "id": "bbb_roofers",
+        "status": "ok",
+        "rows": 158,
+        "fetchedAt": "2026-10-08T20:11:44.109Z"
+      }
+    ],
+    "ipns": {
+      "name": "k51qzi5uqu5djx0ycpstlrvrpvem0ueb9f3hn9oqfifoth37h307ncxxxx2f8l",
+      "label": "oracle-scc-latest",
+      "cid": "bafkreibz7jkwc4snaesyj7eyffuyxggnlutkthpq3nejy6hlnpy6neid7e"
+    }
   }
 ]

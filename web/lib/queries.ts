@@ -54,8 +54,15 @@ export interface PropertySearch {
   openRoofingPermitOnly?: boolean;
   minYearsSinceTransfer?: number;
   ownerLocality?: ("local" | "in_county_other_zip" | "out_of_county" | "out_of_state")[];
+  sort?: "roof_age" | "open_permits" | "distance";
   limit?: number;
 }
+
+const PROPERTY_ORDER = {
+  roof_age: "roof_age_years DESC NULLS LAST, open_roofing_permits DESC, distance_miles",
+  open_permits: "open_roofing_permits DESC, roof_age_years DESC NULLS LAST, distance_miles",
+  distance: "distance_miles, roof_age_years DESC NULLS LAST",
+} as const;
 
 export async function searchProperties(s: PropertySearch) {
   const b = bbox(s.center, s.radiusMiles);
@@ -92,11 +99,11 @@ export async function searchProperties(s: PropertySearch) {
             last_transfer_year, transfer_basis, years_since_transfer, owner_name, owner_mailing_address, owner_locality,
             source_id, source_url, fetched_at, run_id
      FROM property WHERE ${filter}
-     ORDER BY open_roofing_permits DESC, roof_age_years DESC NULLS LAST, distance_miles
+     ORDER BY ${PROPERTY_ORDER[s.sort ?? "roof_age"]}
      LIMIT $lim`,
     params,
   );
-  return { center: s.center, radiusMiles: s.radiusMiles, summary, results };
+  return { center: s.center, radiusMiles: s.radiusMiles, sort: s.sort ?? "roof_age", summary, results };
 }
 
 export interface PermitSearch {

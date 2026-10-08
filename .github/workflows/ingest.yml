@@ -49,12 +49,21 @@ jobs:
           RUN_ID="$(date -u +%Y-%m-%dT%H%MZ)"
           MODE="${{ github.event.inputs.mode || 'incremental' }}"
           SINCE="$(date -u -d '3 days ago' +%Y-%m-%d)"
-          pnpm pipeline capture --run "$RUN_ID" --mode "$MODE" --since "$SINCE"
-          pnpm pipeline build --run "$RUN_ID"
-          pnpm pipeline publish --run "$RUN_ID" --mode "$MODE"
-          # Public gateways can lag a fresh announcement; retry verification for up to ~20 min.
-          for i in 1 2 3 4 5; do pnpm pipeline verify --run "$RUN_ID" && break; sleep 240; done
+          pnpm run pipeline capture --run "$RUN_ID" --mode "$MODE" --since "$SINCE"
+          pnpm run pipeline build --run "$RUN_ID"
+          pnpm run pipeline publish --run "$RUN_ID" --mode "$MODE"
+          echo "RUN_ID=$RUN_ID" >> "$GITHUB_ENV"
+      - name: Verify on independent public gateways
+        run: |
+          # Public gateways can lag a fresh announcement; retry for up to ~20 min, then fail honestly.
+          for i in 1 2 3 4 5 6; do
+            pnpm run pipeline verify --run "$RUN_ID" && exit 0
+            sleep 240
+          done
+          exit 1
       - name: Commit run history
+        # Also after a failed verification, so the run's manifest and failing checks are on record.
+        if: ${{ !cancelled() && env.RUN_ID != '' }}
         run: |
           git config user.name "oracle-pipeline"
           git config user.email "oracle-pipeline@users.noreply.github.com"

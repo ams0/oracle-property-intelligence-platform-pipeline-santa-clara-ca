@@ -38,15 +38,16 @@ export const TOOLS = {
   find_aged_roofs: {
     title: "Find properties with aged roofs near a place",
     description:
-      "Properties within a radius whose estimated roof age is at least `min_roof_age_years` (default 15). Roof age comes from the last completed roofing permit when one exists, otherwise from year built — each result states its basis and confidence.",
+      "Properties within a radius whose estimated roof age is at least `min_roof_age_years` (default 15). Roof age comes from the last completed roofing permit when one exists, otherwise from year built — each result states its basis and confidence. `summary` covers every match; `results` is the top `limit` rows ordered by `sort` (default roof_age: oldest roof first; open_permits: properties with open roofing permits first; distance: nearest first).",
     input: z.object({
       ...where.shape,
       min_roof_age_years: z.number().int().min(0).default(15),
+      sort: z.enum(["roof_age", "open_permits", "distance"]).default("roof_age"),
       limit: z.number().int().min(1).max(200).default(25),
     }),
-    run: async (a: { near?: string; lat?: number; lon?: number; radius_miles: number; min_roof_age_years: number; limit: number }) => {
+    run: async (a: { near?: string; lat?: number; lon?: number; radius_miles: number; min_roof_age_years: number; sort: "roof_age" | "open_permits" | "distance"; limit: number }) => {
       const c = await center(a);
-      return { ...(await searchProperties({ center: c, radiusMiles: a.radius_miles, minRoofAge: a.min_roof_age_years, limit: a.limit })), provenance: await provenance() };
+      return { ...(await searchProperties({ center: c, radiusMiles: a.radius_miles, minRoofAge: a.min_roof_age_years, sort: a.sort, limit: a.limit })), provenance: await provenance() };
     },
   },
   find_open_roofing_permits: {

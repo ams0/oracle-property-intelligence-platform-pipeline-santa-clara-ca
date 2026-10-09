@@ -1,0 +1,269 @@
+{
+  "county": {
+    "name": "Santa Clara County",
+    "state": "CA",
+    "fips": "06085"
+  },
+  "tables": {
+    "property": 494841,
+    "permit": 140008,
+    "contractor": 4968,
+    "business": 107675
+  },
+  "property": {
+    "properties": "494841",
+    "with_coordinates": "494841",
+    "with_year_built": "473144",
+    "with_roof_age": "473176",
+    "roof_age_15_plus": "440731",
+    "roof_age_from_permit": "3638",
+    "with_transfer_year": "476127",
+    "no_transfer_10y_plus": "196434",
+    "with_owner": "18323",
+    "out_of_area_owners": "1227",
+    "with_open_roofing_permit": "1139"
+  },
+  "permitsByJurisdiction": [
+    {
+      "jurisdiction": "SAN JOSE",
+      "permits": "93444",
+      "roofing": "7639",
+      "roofing_open": "981",
+      "roofing_open_2y_plus": "5",
+      "roofing_expired_unfinaled": "6573",
+      "with_cslb_contractor": "25385",
+      "with_apn": "91227",
+      "earliest_issued": "1938-10-04",
+      "latest_issued": "2026-10-07"
+    },
+    {
+      "jurisdiction": "CAMPBELL",
+      "permits": "40625",
+      "roofing": "4392",
+      "roofing_open": "316",
+      "roofing_open_2y_plus": "179",
+      "roofing_expired_unfinaled": "606",
+      "with_cslb_contractor": "10143",
+      "with_apn": "39102",
+      "earliest_issued": "1990-01-10",
+      "latest_issued": "2026-10-02"
+    },
+    {
+      "jurisdiction": "GILROY",
+      "permits": "5939",
+      "roofing": "687",
+      "roofing_open": "34",
+      "roofing_open_2y_plus": "0",
+      "roofing_expired_unfinaled": "40",
+      "with_cslb_contractor": "0",
+      "with_apn": "5928",
+      "earliest_issued": "2023-06-15",
+      "latest_issued": "2026-09-21"
+    }
+  ],
+  "propertiesByJurisdiction": [
+    {
+      "jurisdiction": "SAN JOSE",
+      "properties": "244541",
+      "with_year_built": "237358",
+      "with_roofing_permit_history": "6753"
+    },
+    {
+      "jurisdiction": "SUNNYVALE",
+      "properties": "34120",
+      "with_year_built": "33542",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "SANTA CLARA",
+      "properties": "30386",
+      "with_year_built": "29684",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "UNINCORPORATED",
+      "properties": "27069",
+      "with_year_built": "19801",
+      "with_roofing_permit_history": "2"
+    },
+    {
+      "jurisdiction": "PALO ALTO",
+      "properties": "21016",
+      "with_year_built": "20353",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "MILPITAS",
+      "properties": "20587",
+      "with_year_built": "19903",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "MOUNTAIN VIEW",
+      "properties": "20386",
+      "with_year_built": "19834",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "CUPERTINO",
+      "properties": "15992",
+      "with_year_built": "15632",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "GILROY",
+      "properties": "15295",
+      "with_year_built": "14428",
+      "with_roofing_permit_history": "626"
+    },
+    {
+      "jurisdiction": "MORGAN HILL",
+      "properties": "14224",
+      "with_year_built": "13400",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "CAMPBELL",
+      "properties": "12399",
+      "with_year_built": "11999",
+      "with_roofing_permit_history": "3626"
+    },
+    {
+      "jurisdiction": "LOS GATOS",
+      "properties": "11549",
+      "with_year_built": "11003",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "SARATOGA",
+      "properties": "11412",
+      "with_year_built": "10876",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "LOS ALTOS",
+      "properties": "11286",
+      "with_year_built": "11040",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "LOS ALTOS HILLS",
+      "properties": "3281",
+      "with_year_built": "3029",
+      "with_roofing_permit_history": "0"
+    },
+    {
+      "jurisdiction": "MONTE SERENO",
+      "properties": "1298",
+      "with_year_built": "1262",
+      "with_roofing_permit_history": "0"
+    }
+  ],
+  "contractor": {
+    "contractors": "4968",
+    "roofing_licensed": "556",
+    "with_bbb_rating": "77",
+    "with_website": "965"
+  },
+  "sources": [
+    {
+      "id": "scc_parcels",
+      "status": "ok",
+      "rows": 504717,
+      "fetchedAt": "2026-10-09T16:12:24.142Z",
+      "durationMs": 57857,
+      "limitations": [
+        "Bulk CSV export endpoint is deprecated (HTTP 410); paged SODA API used instead (~18 s per 50k rows).",
+        "No owner, year built, transfer date or use code in this dataset."
+      ]
+    },
+    {
+      "id": "scc_planning_parcels",
+      "status": "ok",
+      "rows": 504648,
+      "fetchedAt": "2026-10-09T16:12:24.300Z",
+      "durationMs": 52752,
+      "limitations": [
+        "Year_Built missing/zero on ~6% of parcels.",
+        "Document_Number is the latest recorded document (may be a non-sale transfer such as a trust deed); transfer year is estimated from it.",
+        "ArcGIS page size capped at 2,000 rows (~253 requests for a full pull)."
+      ]
+    },
+    {
+      "id": "los_gatos_roll",
+      "status": "ok",
+      "rows": 18984,
+      "fetchedAt": "2026-10-09T16:12:24.301Z",
+      "durationMs": 3002,
+      "limitations": [
+        "Covers ~19k parcels (~3.8% of county). No free county-wide owner/mailing source exists; the Assessor site is behind a bot challenge (not bypassed)."
+      ]
+    },
+    {
+      "id": "sj_permits",
+      "status": "ok",
+      "rows": 19824,
+      "fetchedAt": "2026-10-09T16:12:24.302Z",
+      "durationMs": 1574,
+      "limitations": [
+        "No permit status column beyond the dataset it came from; no application or expiration date.",
+        "Contractor is a free-text 'COMPANY  Person' string with no CSLB license number; matched to CSLB by normalized name.",
+        "No finaled-permit dataset; a permit leaving Active without appearing in Expired is treated as closed."
+      ]
+    },
+    {
+      "id": "campbell_permits",
+      "status": "ok",
+      "rows": 0,
+      "fetchedAt": "2026-10-09T16:12:24.303Z",
+      "durationMs": 1327,
+      "limitations": [
+        "No APN, valuation or final date (finaled only as a status). ProjectName usually, not always, holds the contractor."
+      ]
+    },
+    {
+      "id": "gilroy_permits",
+      "status": "ok",
+      "rows": 0,
+      "fetchedAt": "2026-10-09T16:12:24.305Z",
+      "durationMs": 541,
+      "limitations": [
+        "Publisher labels it a proof of concept; covers applications since 2023-06. No contractor field."
+      ]
+    },
+    {
+      "id": "cslb_master",
+      "status": "ok",
+      "rows": 243786,
+      "fetchedAt": "2026-10-09T16:12:24.305Z",
+      "durationMs": 22576,
+      "limitations": [
+        "Excludes cancelled/revoked/non-renewable licenses.",
+        "~78 MB single download with no Range/compression support; the server cuts responses at ~150 s when throttled, so a run may reuse the last complete snapshot (status 'stale').",
+        "County field is the self-reported mailing county."
+      ]
+    },
+    {
+      "id": "overture_places",
+      "status": "ok",
+      "rows": 122713,
+      "fetchedAt": "2026-10-09T16:12:24.306Z",
+      "durationMs": 10435,
+      "limitations": [
+        "Aggregated from multiple providers (CDLA-Permissive-2.0 / Apache-2.0 / CC0); business identity is a candidate, not legal identity."
+      ]
+    },
+    {
+      "id": "bbb_roofers",
+      "status": "ok",
+      "rows": 158,
+      "fetchedAt": "2026-10-09T16:12:24.307Z",
+      "durationMs": 66594,
+      "limitations": [
+        "bbb.org pages are behind a bot challenge (not bypassed); only the public search JSON is read, ~30 requests at 2 s spacing.",
+        "Search results include off-category businesses; only results whose category mentions roofing are kept.",
+        "Ratings are a reputation signal, not legal identity; matched to CSLB contractors by normalized name/phone."
+      ]
+    }
+  ]
+}

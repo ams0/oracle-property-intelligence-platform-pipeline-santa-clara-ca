@@ -1,0 +1,357 @@
+{
+  "schema": "oracle-scc-artifact-manifest/v1",
+  "run_id": "2026-10-13T1657Z",
+  "created_at": "2026-10-13T17:00:35.297Z",
+  "county": {
+    "name": "Santa Clara County",
+    "state": "CA",
+    "fips": "06085"
+  },
+  "root": {
+    "cid": "bafybeihti2dzgqxymj3gvap2gdvsgewo6gd7tlorkj4kc3io3yur7vdnse",
+    "codec": "directory",
+    "car": {
+      "name": "oracle-scc-2026-10-13T1657Z.car",
+      "path": "oracle-scc-2026-10-13T1657Z.car",
+      "cid": "bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4",
+      "size": 40184811,
+      "sha256": "9af88f6770097e61f45f24a51799c68a300d9792b4debfcbc9641f8ec36d950d",
+      "codec": "car",
+      "ipld_codec": "dag-pb",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4?format=car",
+        "https://dweb.link/ipfs/bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4?format=car",
+        "https://trustless-gateway.link/ipfs/bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4?format=car",
+        "https://gateway.pinata.cloud/ipfs/bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4?format=car",
+        "https://ipfs.orbitor.dev/ipfs/bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4?format=car"
+      ]
+    }
+  },
+  "objects": [
+    {
+      "name": "indexes",
+      "path": "indexes/",
+      "cid": "bafybeicttjcdppmz5d6looq4w2b3aycjxxwwurxb5nm7xrybaxoqq3vrme",
+      "size": 8096846,
+      "sha256": "",
+      "codec": "directory",
+      "ipld_codec": "dag-pb",
+      "root_path": "indexes",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafybeicttjcdppmz5d6looq4w2b3aycjxxwwurxb5nm7xrybaxoqq3vrme?format=car",
+        "https://dweb.link/ipfs/bafybeicttjcdppmz5d6looq4w2b3aycjxxwwurxb5nm7xrybaxoqq3vrme?format=car",
+        "https://trustless-gateway.link/ipfs/bafybeicttjcdppmz5d6looq4w2b3aycjxxwwurxb5nm7xrybaxoqq3vrme?format=car",
+        "https://gateway.pinata.cloud/ipfs/bafybeicttjcdppmz5d6looq4w2b3aycjxxwwurxb5nm7xrybaxoqq3vrme?format=car",
+        "https://ipfs.orbitor.dev/ipfs/bafybeicttjcdppmz5d6looq4w2b3aycjxxwwurxb5nm7xrybaxoqq3vrme?format=car"
+      ]
+    },
+    {
+      "name": "samples",
+      "path": "samples/",
+      "cid": "bafybeibitnaltcc2quvqtdkysgjy4gvr6bcodlxoikewvdt2mo4ssn6epi",
+      "size": 124740,
+      "sha256": "",
+      "codec": "directory",
+      "ipld_codec": "dag-pb",
+      "root_path": "samples",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafybeibitnaltcc2quvqtdkysgjy4gvr6bcodlxoikewvdt2mo4ssn6epi?format=car",
+        "https://dweb.link/ipfs/bafybeibitnaltcc2quvqtdkysgjy4gvr6bcodlxoikewvdt2mo4ssn6epi?format=car",
+        "https://trustless-gateway.link/ipfs/bafybeibitnaltcc2quvqtdkysgjy4gvr6bcodlxoikewvdt2mo4ssn6epi?format=car",
+        "https://gateway.pinata.cloud/ipfs/bafybeibitnaltcc2quvqtdkysgjy4gvr6bcodlxoikewvdt2mo4ssn6epi?format=car",
+        "https://ipfs.orbitor.dev/ipfs/bafybeibitnaltcc2quvqtdkysgjy4gvr6bcodlxoikewvdt2mo4ssn6epi?format=car"
+      ]
+    },
+    {
+      "name": "tables",
+      "path": "tables/",
+      "cid": "bafybeiheqx4kcbkb4nuadnmf2mvmezv5rb773np3f6frbnuee7oyto46ly",
+      "size": 31916504,
+      "sha256": "",
+      "codec": "directory",
+      "ipld_codec": "dag-pb",
+      "root_path": "tables",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafybeiheqx4kcbkb4nuadnmf2mvmezv5rb773np3f6frbnuee7oyto46ly?format=car",
+        "https://dweb.link/ipfs/bafybeiheqx4kcbkb4nuadnmf2mvmezv5rb773np3f6frbnuee7oyto46ly?format=car",
+        "https://trustless-gateway.link/ipfs/bafybeiheqx4kcbkb4nuadnmf2mvmezv5rb773np3f6frbnuee7oyto46ly?format=car",
+        "https://gateway.pinata.cloud/ipfs/bafybeiheqx4kcbkb4nuadnmf2mvmezv5rb773np3f6frbnuee7oyto46ly?format=car",
+        "https://ipfs.orbitor.dev/ipfs/bafybeiheqx4kcbkb4nuadnmf2mvmezv5rb773np3f6frbnuee7oyto46ly?format=car"
+      ]
+    },
+    {
+      "name": "coverage.json",
+      "path": "coverage.json",
+      "cid": "bafkreidgisnjjnllv6ccwbgi7p4o3lw6vzwb7cakkminrlozwsnxena44e",
+      "size": 8017,
+      "sha256": "66449a94b56baf842b04c8fbf8edaedeae6c1f880a5310d8add9b49b72341ce1",
+      "codec": "file",
+      "ipld_codec": "raw",
+      "root_path": "coverage.json",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafkreidgisnjjnllv6ccwbgi7p4o3lw6vzwb7cakkminrlozwsnxena44e?format=raw",
+        "https://dweb.link/ipfs/bafkreidgisnjjnllv6ccwbgi7p4o3lw6vzwb7cakkminrlozwsnxena44e?format=raw",
+        "https://trustless-gateway.link/ipfs/bafkreidgisnjjnllv6ccwbgi7p4o3lw6vzwb7cakkminrlozwsnxena44e?format=raw",
+        "https://gateway.pinata.cloud/ipfs/bafkreidgisnjjnllv6ccwbgi7p4o3lw6vzwb7cakkminrlozwsnxena44e?format=raw",
+        "https://ipfs.orbitor.dev/ipfs/bafkreidgisnjjnllv6ccwbgi7p4o3lw6vzwb7cakkminrlozwsnxena44e?format=raw"
+      ]
+    },
+    {
+      "name": "deltas.json",
+      "path": "deltas.json",
+      "cid": "bafkreidqapqvqm4wqpuowwy4p36budvzrxfkbv3zgqi5l355zfusf2hflu",
+      "size": 588,
+      "sha256": "7003e158339683e8eb5b1c7efc1a0eb98dcaa0d7793411d5efbdc96922e8e55d",
+      "codec": "file",
+      "ipld_codec": "raw",
+      "root_path": "deltas.json",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafkreidqapqvqm4wqpuowwy4p36budvzrxfkbv3zgqi5l355zfusf2hflu?format=raw",
+        "https://dweb.link/ipfs/bafkreidqapqvqm4wqpuowwy4p36budvzrxfkbv3zgqi5l355zfusf2hflu?format=raw",
+        "https://trustless-gateway.link/ipfs/bafkreidqapqvqm4wqpuowwy4p36budvzrxfkbv3zgqi5l355zfusf2hflu?format=raw",
+        "https://gateway.pinata.cloud/ipfs/bafkreidqapqvqm4wqpuowwy4p36budvzrxfkbv3zgqi5l355zfusf2hflu?format=raw",
+        "https://ipfs.orbitor.dev/ipfs/bafkreidqapqvqm4wqpuowwy4p36budvzrxfkbv3zgqi5l355zfusf2hflu?format=raw"
+      ]
+    },
+    {
+      "name": "history.json",
+      "path": "history.json",
+      "cid": "bafkreiaj7aqjdru47df6d4uole4dmawz7w3aow2qrhi3vsgbwuxyicoa4e",
+      "size": 20789,
+      "sha256": "09f82091c69cf8cbe1f28e59383602d9fdb6075b5089d1bac8c1b52f8409c0e1",
+      "codec": "file",
+      "ipld_codec": "raw",
+      "root_path": "history.json",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafkreiaj7aqjdru47df6d4uole4dmawz7w3aow2qrhi3vsgbwuxyicoa4e?format=raw",
+        "https://dweb.link/ipfs/bafkreiaj7aqjdru47df6d4uole4dmawz7w3aow2qrhi3vsgbwuxyicoa4e?format=raw",
+        "https://trustless-gateway.link/ipfs/bafkreiaj7aqjdru47df6d4uole4dmawz7w3aow2qrhi3vsgbwuxyicoa4e?format=raw",
+        "https://gateway.pinata.cloud/ipfs/bafkreiaj7aqjdru47df6d4uole4dmawz7w3aow2qrhi3vsgbwuxyicoa4e?format=raw",
+        "https://ipfs.orbitor.dev/ipfs/bafkreiaj7aqjdru47df6d4uole4dmawz7w3aow2qrhi3vsgbwuxyicoa4e?format=raw"
+      ]
+    },
+    {
+      "name": "doc_year_calibration.parquet",
+      "path": "indexes/doc_year_calibration.parquet",
+      "cid": "bafkreibe5acuxdeeggh6ilwozqtibgff2drdpziojpab3wbbh5aup3rtvq",
+      "size": 1426,
+      "sha256": "24e8054b8c84318fe42ececc268098a5d0e237e50e4bc01dd8213f4147ee33ac",
+      "codec": "file",
+      "ipld_codec": "raw",
+      "root_path": "indexes/doc_year_calibration.parquet",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafkreibe5acuxdeeggh6ilwozqtibgff2drdpziojpab3wbbh5aup3rtvq?format=raw",
+        "https://dweb.link/ipfs/bafkreibe5acuxdeeggh6ilwozqtibgff2drdpziojpab3wbbh5aup3rtvq?format=raw",
+        "https://trustless-gateway.link/ipfs/bafkreibe5acuxdeeggh6ilwozqtibgff2drdpziojpab3wbbh5aup3rtvq?format=raw",
+        "https://gateway.pinata.cloud/ipfs/bafkreibe5acuxdeeggh6ilwozqtibgff2drdpziojpab3wbbh5aup3rtvq?format=raw",
+        "https://ipfs.orbitor.dev/ipfs/bafkreibe5acuxdeeggh6ilwozqtibgff2drdpziojpab3wbbh5aup3rtvq?format=raw"
+      ]
+    },
+    {
+      "name": "property_geo.parquet",
+      "path": "indexes/property_geo.parquet",
+      "cid": "bafybeibtxy4xew6v74jk34mwhwcbwei7eo35jrkmszz6rgqpeksc4obtca",
+      "size": 8095420,
+      "sha256": "ef281ff19a7ca3e52153ec71c5d04833df41d5b169abbc0fb197259ac5185d61",
+      "codec": "file",
+      "ipld_codec": "dag-pb",
+      "root_path": "indexes/property_geo.parquet",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafybeibtxy4xew6v74jk34mwhwcbwei7eo35jrkmszz6rgqpeksc4obtca?format=car",
+        "https://dweb.link/ipfs/bafybeibtxy4xew6v74jk34mwhwcbwei7eo35jrkmszz6rgqpeksc4obtca?format=car",
+        "https://trustless-gateway.link/ipfs/bafybeibtxy4xew6v74jk34mwhwcbwei7eo35jrkmszz6rgqpeksc4obtca?format=car",
+        "https://gateway.pinata.cloud/ipfs/bafybeibtxy4xew6v74jk34mwhwcbwei7eo35jrkmszz6rgqpeksc4obtca?format=car",
+        "https://ipfs.orbitor.dev/ipfs/bafybeibtxy4xew6v74jk34mwhwcbwei7eo35jrkmszz6rgqpeksc4obtca?format=car"
+      ]
+    },
+    {
+      "name": "reconciliation.json",
+      "path": "reconciliation.json",
+      "cid": "bafkreic4nb3oaxtkqbgg3upjdgn6f6oldwp2rrvp4wf5fj5tddmye3wioe",
+      "size": 1907,
+      "sha256": "5c6876e05e6a804c6dd1e9199be2f9cb1d9fa8c6afe58bd2a7b318d9826ec871",
+      "codec": "file",
+      "ipld_codec": "raw",
+      "root_path": "reconciliation.json",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafkreic4nb3oaxtkqbgg3upjdgn6f6oldwp2rrvp4wf5fj5tddmye3wioe?format=raw",
+        "https://dweb.link/ipfs/bafkreic4nb3oaxtkqbgg3upjdgn6f6oldwp2rrvp4wf5fj5tddmye3wioe?format=raw",
+        "https://trustless-gateway.link/ipfs/bafkreic4nb3oaxtkqbgg3upjdgn6f6oldwp2rrvp4wf5fj5tddmye3wioe?format=raw",
+        "https://gateway.pinata.cloud/ipfs/bafkreic4nb3oaxtkqbgg3upjdgn6f6oldwp2rrvp4wf5fj5tddmye3wioe?format=raw",
+        "https://ipfs.orbitor.dev/ipfs/bafkreic4nb3oaxtkqbgg3upjdgn6f6oldwp2rrvp4wf5fj5tddmye3wioe?format=raw"
+      ]
+    },
+    {
+      "name": "aged_roofs_top100.json",
+      "path": "samples/aged_roofs_top100.json",
+      "cid": "bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy",
+      "size": 34351,
+      "sha256": "d3f31abd89a7e71a919511309648a9d8466f614adc22ec5645eb2509a8836a16",
+      "codec": "file",
+      "ipld_codec": "raw",
+      "root_path": "samples/aged_roofs_top100.json",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy?format=raw",
+        "https://dweb.link/ipfs/bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy?format=raw",
+        "https://trustless-gateway.link/ipfs/bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy?format=raw",
+        "https://gateway.pinata.cloud/ipfs/bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy?format=raw",
+        "https://ipfs.orbitor.dev/ipfs/bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy?format=raw"
+      ]
+    },
+    {
+      "name": "open_roofing_permits_oldest100.json",
+      "path": "samples/open_roofing_permits_oldest100.json",
+      "cid": "bafkreid5yjf7tepbc6c75laadhatmee4mec467w6aa3ztnvy2phtnbwsoe",
+      "size": 52932,
+      "sha256": "7dc24bf991e11785feac0019c136109c6105cf7ede003799b6b8d3cf3686d271",
+      "codec": "file",
+      "ipld_codec": "raw",
+      "root_path": "samples/open_roofing_permits_oldest100.json",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafkreid5yjf7tepbc6c75laadhatmee4mec467w6aa3ztnvy2phtnbwsoe?format=raw",
+        "https://dweb.link/ipfs/bafkreid5yjf7tepbc6c75laadhatmee4mec467w6aa3ztnvy2phtnbwsoe?format=raw",
+        "https://trustless-gateway.link/ipfs/bafkreid5yjf7tepbc6c75laadhatmee4mec467w6aa3ztnvy2phtnbwsoe?format=raw",
+        "https://gateway.pinata.cloud/ipfs/bafkreid5yjf7tepbc6c75laadhatmee4mec467w6aa3ztnvy2phtnbwsoe?format=raw",
+        "https://ipfs.orbitor.dev/ipfs/bafkreid5yjf7tepbc6c75laadhatmee4mec467w6aa3ztnvy2phtnbwsoe?format=raw"
+      ]
+    },
+    {
+      "name": "roofing_contractors.json",
+      "path": "samples/roofing_contractors.json",
+      "cid": "bafkreienbrasrnhw4eyqislhyrh6xem5jhk35sgoq5mzvivhiwxudfwh4q",
+      "size": 37457,
+      "sha256": "8d0c4128b4f6e131044967c44feb919d49d5bec8ce87599aa2a745af4196c7e4",
+      "codec": "file",
+      "ipld_codec": "raw",
+      "root_path": "samples/roofing_contractors.json",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafkreienbrasrnhw4eyqislhyrh6xem5jhk35sgoq5mzvivhiwxudfwh4q?format=raw",
+        "https://dweb.link/ipfs/bafkreienbrasrnhw4eyqislhyrh6xem5jhk35sgoq5mzvivhiwxudfwh4q?format=raw",
+        "https://trustless-gateway.link/ipfs/bafkreienbrasrnhw4eyqislhyrh6xem5jhk35sgoq5mzvivhiwxudfwh4q?format=raw",
+        "https://gateway.pinata.cloud/ipfs/bafkreienbrasrnhw4eyqislhyrh6xem5jhk35sgoq5mzvivhiwxudfwh4q?format=raw",
+        "https://ipfs.orbitor.dev/ipfs/bafkreienbrasrnhw4eyqislhyrh6xem5jhk35sgoq5mzvivhiwxudfwh4q?format=raw"
+      ]
+    },
+    {
+      "name": "sources.json",
+      "path": "sources.json",
+      "cid": "bafkreiffefl6rz5nq45y6pmqosnxlkuonl776j6ashb4abypy6aj7sndza",
+      "size": 9997,
+      "sha256": "a52157e8e7ad873b8f3d90749b75aa8e6affff27c091c3c0070fc7809fc9a3c8",
+      "codec": "file",
+      "ipld_codec": "raw",
+      "root_path": "sources.json",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafkreiffefl6rz5nq45y6pmqosnxlkuonl776j6ashb4abypy6aj7sndza?format=raw",
+        "https://dweb.link/ipfs/bafkreiffefl6rz5nq45y6pmqosnxlkuonl776j6ashb4abypy6aj7sndza?format=raw",
+        "https://trustless-gateway.link/ipfs/bafkreiffefl6rz5nq45y6pmqosnxlkuonl776j6ashb4abypy6aj7sndza?format=raw",
+        "https://gateway.pinata.cloud/ipfs/bafkreiffefl6rz5nq45y6pmqosnxlkuonl776j6ashb4abypy6aj7sndza?format=raw",
+        "https://ipfs.orbitor.dev/ipfs/bafkreiffefl6rz5nq45y6pmqosnxlkuonl776j6ashb4abypy6aj7sndza?format=raw"
+      ]
+    },
+    {
+      "name": "business.parquet",
+      "path": "tables/business.parquet",
+      "cid": "bafybeiflvzpemtthuzxmswktvz7rciz3lscfgjt2totqc3r2f57hxtpaqm",
+      "size": 7644626,
+      "sha256": "09bdc42ba576057838a72f0a8be8572f497a25d6ef0464a65ce77f09d256a0e4",
+      "codec": "file",
+      "ipld_codec": "dag-pb",
+      "root_path": "tables/business.parquet",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafybeiflvzpemtthuzxmswktvz7rciz3lscfgjt2totqc3r2f57hxtpaqm?format=car",
+        "https://dweb.link/ipfs/bafybeiflvzpemtthuzxmswktvz7rciz3lscfgjt2totqc3r2f57hxtpaqm?format=car",
+        "https://trustless-gateway.link/ipfs/bafybeiflvzpemtthuzxmswktvz7rciz3lscfgjt2totqc3r2f57hxtpaqm?format=car",
+        "https://gateway.pinata.cloud/ipfs/bafybeiflvzpemtthuzxmswktvz7rciz3lscfgjt2totqc3r2f57hxtpaqm?format=car",
+        "https://ipfs.orbitor.dev/ipfs/bafybeiflvzpemtthuzxmswktvz7rciz3lscfgjt2totqc3r2f57hxtpaqm?format=car"
+      ]
+    },
+    {
+      "name": "contractor.parquet",
+      "path": "tables/contractor.parquet",
+      "cid": "bafkreid5uo4qgy3x7s3lph3bj6j6rpm7hzatcmnu6ubb3fisdzpwy7ypzi",
+      "size": 297675,
+      "sha256": "7da3b9036377fcb6b79f614f93e8bd9f3e413131b4f5021d95121e5f6c7f0fca",
+      "codec": "file",
+      "ipld_codec": "raw",
+      "root_path": "tables/contractor.parquet",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafkreid5uo4qgy3x7s3lph3bj6j6rpm7hzatcmnu6ubb3fisdzpwy7ypzi?format=raw",
+        "https://dweb.link/ipfs/bafkreid5uo4qgy3x7s3lph3bj6j6rpm7hzatcmnu6ubb3fisdzpwy7ypzi?format=raw",
+        "https://trustless-gateway.link/ipfs/bafkreid5uo4qgy3x7s3lph3bj6j6rpm7hzatcmnu6ubb3fisdzpwy7ypzi?format=raw",
+        "https://gateway.pinata.cloud/ipfs/bafkreid5uo4qgy3x7s3lph3bj6j6rpm7hzatcmnu6ubb3fisdzpwy7ypzi?format=raw",
+        "https://ipfs.orbitor.dev/ipfs/bafkreid5uo4qgy3x7s3lph3bj6j6rpm7hzatcmnu6ubb3fisdzpwy7ypzi?format=raw"
+      ]
+    },
+    {
+      "name": "permit.parquet",
+      "path": "tables/permit.parquet",
+      "cid": "bafybeifrbd2ozvuyor67wz66arenhqxirrjudycvpweikqycbdfmnkysxq",
+      "size": 7641050,
+      "sha256": "47036a7f1d38576a5733076dbcf1185b132ea66909da7f38194fe62d951087e4",
+      "codec": "file",
+      "ipld_codec": "dag-pb",
+      "root_path": "tables/permit.parquet",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafybeifrbd2ozvuyor67wz66arenhqxirrjudycvpweikqycbdfmnkysxq?format=car",
+        "https://dweb.link/ipfs/bafybeifrbd2ozvuyor67wz66arenhqxirrjudycvpweikqycbdfmnkysxq?format=car",
+        "https://trustless-gateway.link/ipfs/bafybeifrbd2ozvuyor67wz66arenhqxirrjudycvpweikqycbdfmnkysxq?format=car",
+        "https://gateway.pinata.cloud/ipfs/bafybeifrbd2ozvuyor67wz66arenhqxirrjudycvpweikqycbdfmnkysxq?format=car",
+        "https://ipfs.orbitor.dev/ipfs/bafybeifrbd2ozvuyor67wz66arenhqxirrjudycvpweikqycbdfmnkysxq?format=car"
+      ]
+    },
+    {
+      "name": "property.parquet",
+      "path": "tables/property.parquet",
+      "cid": "bafybeihbs26pmy3bob2jirrc2mseiisy2bql6g4ownysafel6cal7376ce",
+      "size": 16333153,
+      "sha256": "7a1c59e6fbae91b79276465b94342593c0a7e2b8ecab7a88f43fc4b8537d53f1",
+      "codec": "file",
+      "ipld_codec": "dag-pb",
+      "root_path": "tables/property.parquet",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafybeihbs26pmy3bob2jirrc2mseiisy2bql6g4ownysafel6cal7376ce?format=car",
+        "https://dweb.link/ipfs/bafybeihbs26pmy3bob2jirrc2mseiisy2bql6g4ownysafel6cal7376ce?format=car",
+        "https://trustless-gateway.link/ipfs/bafybeihbs26pmy3bob2jirrc2mseiisy2bql6g4ownysafel6cal7376ce?format=car",
+        "https://gateway.pinata.cloud/ipfs/bafybeihbs26pmy3bob2jirrc2mseiisy2bql6g4ownysafel6cal7376ce?format=car",
+        "https://ipfs.orbitor.dev/ipfs/bafybeihbs26pmy3bob2jirrc2mseiisy2bql6g4ownysafel6cal7376ce?format=car"
+      ]
+    },
+    {
+      "name": "oracle-scc-2026-10-13T1657Z.car",
+      "path": "oracle-scc-2026-10-13T1657Z.car",
+      "cid": "bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4",
+      "size": 40184811,
+      "sha256": "9af88f6770097e61f45f24a51799c68a300d9792b4debfcbc9641f8ec36d950d",
+      "codec": "car",
+      "ipld_codec": "dag-pb",
+      "gateway_urls": [
+        "https://ipfs.io/ipfs/bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4?format=car",
+        "https://dweb.link/ipfs/bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4?format=car",
+        "https://trustless-gateway.link/ipfs/bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4?format=car",
+        "https://gateway.pinata.cloud/ipfs/bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4?format=car",
+        "https://ipfs.orbitor.dev/ipfs/bafybeifhtekqxdxzhnyq5gn5igw5smylogw3vv2rluxmvrnwinyeguqso4?format=car"
+      ]
+    }
+  ],
+  "ipns": {
+    "name": "k51qzi5uqu5djx0ycpstlrvrpvem0ueb9f3hn9oqfifoth37h307ncxxxx2f8l",
+    "label": "oracle-scc-latest",
+    "resolves_to": "this manifest (see run history for its CID)"
+  },
+  "previous_run": {
+    "run_id": "2026-10-12T1902Z",
+    "manifest_cid": "bafkreidn7g6l3q42yd7hgbkwcsi7xdon65wqy76b335n4bmokfohwp2kia",
+    "root_cid": "bafybeidsyti6hrikro6lst2unhwnagqensay4c7gy655q75vw5iwibmqqe"
+  },
+  "pinning": [
+    {
+      "provider": "Filebase (IPFS pinning, 3 regions)",
+      "bucket": "prism-oracle-santa-clara",
+      "origins": [
+        "/dnsaddr/bitswap.filebase.io"
+      ]
+    }
+  ],
+  "verification_hint": "Fetch any object with GET <public gateway>/ipfs/<cid>?format=raw (single-block files) or ?format=car (DAGs); verify the CID against the bytes and sha256 against `sha256`. Files are also reachable as /ipfs/<root.cid>/<root_path>."
+}

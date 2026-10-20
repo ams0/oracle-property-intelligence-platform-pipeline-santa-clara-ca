@@ -1,0 +1,77 @@
+[
+  {
+    "entity": "property",
+    "check_name": "parcel polygon rows merged into one property per APN",
+    "count": "0"
+  },
+  {
+    "entity": "property",
+    "check_name": "parcel rows dropped: missing APN or geometry",
+    "count": "9876"
+  },
+  {
+    "entity": "permit",
+    "check_name": "San Jose duplicate rows across Active/Last-30/Expired extracts collapsed",
+    "count": "2165"
+  },
+  {
+    "entity": "permit",
+    "check_name": "Campbell duplicate rows across Active/Inactive layers collapsed",
+    "count": "0"
+  },
+  {
+    "entity": "permit",
+    "check_name": "permits linked to parcel by source APN",
+    "count": "85761"
+  },
+  {
+    "entity": "permit",
+    "check_name": "permits linked to parcel by point-in-polygon",
+    "count": "45570"
+  },
+  {
+    "entity": "permit",
+    "check_name": "permits linked to parcel by unique address match",
+    "count": "5787"
+  },
+  {
+    "entity": "permit",
+    "check_name": "permits with no parcel link",
+    "count": "3776"
+  },
+  {
+    "entity": "contractor",
+    "check_name": "permit contractor strings matched to a CSLB license",
+    "count": "35902"
+  },
+  {
+    "entity": "contractor",
+    "check_name": "permit contractor strings with no CSLB match",
+    "count": "75162"
+  },
+  {
+    "entity": "contractor",
+    "check_name": "CSLB contractors matched to a BBB profile",
+    "count": "76"
+  },
+  {
+    "entity": "contractor",
+    "check_name": "CSLB contractors matched to an Overture place",
+    "count": "1081"
+  },
+  {
+    "entity": "permit",
+    "check_name": "permits carried forward from the previous run (windowed sources)",
+    "count": "123303"
+  },
+  {
+    "entity": "permit",
+    "check_name": "San Jose permits that left the Active list since the previous run (closed_inferred)",
+    "count": "730"
+  },
+  {
+    "entity": "ownership",
+    "check_name": "properties with owner name (Los Gatos roll)",
+    "count": "18331"
+  }
+]

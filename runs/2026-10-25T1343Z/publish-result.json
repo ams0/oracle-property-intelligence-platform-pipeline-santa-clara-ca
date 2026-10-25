@@ -1,0 +1,104 @@
+{
+  "manifestCid": "bafkreifmk3pwgsealqoglu2iowvvdrbw5gjft2w33rh37i2aumhefp7q2u",
+  "ipns": {
+    "name": "k51qzi5uqu5djx0ycpstlrvrpvem0ueb9f3hn9oqfifoth37h307ncxxxx2f8l",
+    "label": "oracle-scc-latest",
+    "cid": "bafkreifmk3pwgsealqoglu2iowvvdrbw5gjft2w33rh37i2aumhefp7q2u"
+  },
+  "history": {
+    "run_id": "2026-10-25T1343Z",
+    "created_at": "2026-10-25T13:45:15.575Z",
+    "mode": "incremental",
+    "root_cid": "bafybeie6hwcclutmwjer7nuitj3endtlzo6qdkehn6o4plpwobuycufzhi",
+    "manifest_cid": "bafkreifmk3pwgsealqoglu2iowvvdrbw5gjft2w33rh37i2aumhefp7q2u",
+    "car_cid": "bafybeihrz4ymgwamg4vc37aect3ekkpchnd6gjnsvbs4uaxjcvizaouovy",
+    "counts": {
+      "property": 494841,
+      "permit": 141389,
+      "contractor": 5036,
+      "business": 107675
+    },
+    "deltas": {
+      "property": {
+        "added": 0,
+        "changed": 1170,
+        "removed": 0,
+        "unchanged": 493671
+      },
+      "permit": {
+        "added": 0,
+        "changed": 157,
+        "removed": 0,
+        "unchanged": 141232
+      },
+      "contractor": {
+        "added": 0,
+        "changed": 0,
+        "removed": 0,
+        "unchanged": 5036
+      },
+      "business": {
+        "added": 0,
+        "changed": 0,
+        "removed": 0,
+        "unchanged": 107675
+      }
+    },
+    "sources": [
+      {
+        "id": "scc_parcels",
+        "status": "ok",
+        "rows": 504717,
+        "fetchedAt": "2026-10-25T13:43:05.969Z"
+      },
+      {
+        "id": "scc_planning_parcels",
+        "status": "ok",
+        "rows": 505060,
+        "fetchedAt": "2026-10-25T13:43:06.001Z"
+      },
+      {
+        "id": "los_gatos_roll",
+        "status": "ok",
+        "rows": 18991,
+        "fetchedAt": "2026-10-25T13:43:06.003Z"
+      },
+      {
+        "id": "sj_permits",
+        "status": "ok",
+        "rows": 19932,
+        "fetchedAt": "2026-10-25T13:43:06.004Z"
+      },
+      {
+        "id": "campbell_permits",
+        "status": "ok",
+        "rows": 81,
+        "fetchedAt": "2026-10-25T13:43:06.006Z"
+      },
+      {
+        "id": "gilroy_permits",
+        "status": "ok",
+        "rows": 0,
+        "fetchedAt": "2026-10-25T13:43:06.007Z"
+      },
+      {
+        "id": "cslb_master",
+        "status": "ok",
+        "rows": 245633,
+        "fetchedAt": "2026-10-25T13:43:06.008Z"
+      },
+      {
+        "id": "overture_places",
+        "status": "ok",
+        "rows": 122713,
+        "fetchedAt": "2026-10-25T13:43:06.009Z"
+      },
+      {
+        "id": "bbb_roofers",
+        "status": "ok",
+        "rows": 159,
+        "fetchedAt": "2026-10-25T13:43:06.010Z"
+      }
+    ]
+  }
+}

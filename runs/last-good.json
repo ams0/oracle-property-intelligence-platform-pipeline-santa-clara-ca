@@ -1,14 +1,14 @@
 {
   "cslb_master": {
-    "cid": "bafybeidmuz5f55mnh6umydbgmscylcthzasornvxa4d54nbdxolrcuiple",
-    "sha256": "371108ac2b2c13515db6f95ceffffb48b0165f3c29c7f625246c927467c4f376",
-    "size": 78251246,
+    "cid": "bafybeid22d2egpfulexgrqg6dqxocl2qan3f6qkr4b2iaidhkjllbgd26i",
+    "sha256": "f12a9bd7c59da16e2fca8fce2414bfb658deb687f2633c35a2da403be904260f",
+    "size": 78323051,
     "file": "cslb_master.csv",
-    "fetchedAt": "2026-10-26T16:07:27.413Z",
-    "runId": "2026-10-26T1607Z",
+    "fetchedAt": "2026-10-28T16:02:11.153Z",
+    "runId": "2026-10-28T1602Z",
     "capture": {
       "format": "csv",
-      "rows": 245711,
+      "rows": 245927,
       "requestUrls": [
         "https://www.cslb.ca.gov/OnlineServices/DataPortal/DownLoadFile.ashx?fName=MasterLicenseData&type=C"
       ],

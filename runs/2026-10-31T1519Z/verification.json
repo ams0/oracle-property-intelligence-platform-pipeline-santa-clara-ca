@@ -1,0 +1,1423 @@
+{
+  "run_id": "2026-10-31T1519Z",
+  "verified_at": "2026-10-31T15:39:30.676Z",
+  "all_ok": true,
+  "objects": [
+    {
+      "name": "oracle-scc-2026-10-31T1519Z.car",
+      "cid": "bafybeibtvtwpsnxqs33pi5xdk6knsf3gnclvibxksgsbqbl6tti32xrwue",
+      "codec": "car",
+      "expected": {
+        "size": 40301577,
+        "sha256": "5bae3ede1cf77a0389c95b6f1b899e8d8a19979f86703ccc57e3340d3b7b9f11"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafybeibtvtwpsnxqs33pi5xdk6knsf3gnclvibxksgsbqbl6tti32xrwue?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 39382,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafybeibtvtwpsnxqs33pi5xdk6knsf3gnclvibxksgsbqbl6tti32xrwue?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 19750,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafybeibtvtwpsnxqs33pi5xdk6knsf3gnclvibxksgsbqbl6tti32xrwue?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 159,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeibtvtwpsnxqs33pi5xdk6knsf3gnclvibxksgsbqbl6tti32xrwue?format=car",
+          "bytesReceived": 40305155,
+          "blocksVerified": 40,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 6528,
+          "size": 40301577,
+          "sha256": "5bae3ede1cf77a0389c95b6f1b899e8d8a19979f86703ccc57e3340d3b7b9f11",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafybeibtvtwpsnxqs33pi5xdk6knsf3gnclvibxksgsbqbl6tti32xrwue?format=car",
+          "bytesReceived": 40305155,
+          "blocksVerified": 40,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 1854,
+          "size": 40301577,
+          "sha256": "5bae3ede1cf77a0389c95b6f1b899e8d8a19979f86703ccc57e3340d3b7b9f11",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "indexes/",
+      "cid": "bafybeihbqk7kzf3mh3gxcx5zt3wa4eb4jymxsitvg2lghg33playq4cpru",
+      "codec": "directory",
+      "expected": {
+        "size": 8078249,
+        "sha256": ""
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafybeihbqk7kzf3mh3gxcx5zt3wa4eb4jymxsitvg2lghg33playq4cpru?format=car&dag-scope=block",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 314,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafybeihbqk7kzf3mh3gxcx5zt3wa4eb4jymxsitvg2lghg33playq4cpru?format=car&dag-scope=block",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 384,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafybeihbqk7kzf3mh3gxcx5zt3wa4eb4jymxsitvg2lghg33playq4cpru?format=car&dag-scope=block",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 231,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeihbqk7kzf3mh3gxcx5zt3wa4eb4jymxsitvg2lghg33playq4cpru?format=car&dag-scope=block",
+          "bytesReceived": 241,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 5539,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafybeihbqk7kzf3mh3gxcx5zt3wa4eb4jymxsitvg2lghg33playq4cpru?format=car&dag-scope=block",
+          "bytesReceived": 241,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 2210,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "samples/",
+      "cid": "bafybeigufwvqmpvqpfr3l5codchpir77v5o6k2xxk7fabwqjrna7cyve4u",
+      "codec": "directory",
+      "expected": {
+        "size": 124719,
+        "sha256": ""
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafybeigufwvqmpvqpfr3l5codchpir77v5o6k2xxk7fabwqjrna7cyve4u?format=car&dag-scope=block",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 39198,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafybeigufwvqmpvqpfr3l5codchpir77v5o6k2xxk7fabwqjrna7cyve4u?format=car&dag-scope=block",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 58628,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafybeigufwvqmpvqpfr3l5codchpir77v5o6k2xxk7fabwqjrna7cyve4u?format=car&dag-scope=block",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 19738,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeigufwvqmpvqpfr3l5codchpir77v5o6k2xxk7fabwqjrna7cyve4u?format=car&dag-scope=block",
+          "bytesReceived": 320,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 7055,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafybeigufwvqmpvqpfr3l5codchpir77v5o6k2xxk7fabwqjrna7cyve4u?format=car&dag-scope=block",
+          "bytesReceived": 320,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 2207,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "tables/",
+      "cid": "bafybeiczdvonpsvxne2pvkcecb7lncpragqw2x6uia6sfvsiqtvgphygsm",
+      "codec": "directory",
+      "expected": {
+        "size": 32009117,
+        "sha256": ""
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafybeiczdvonpsvxne2pvkcecb7lncpragqw2x6uia6sfvsiqtvgphygsm?format=car&dag-scope=block",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 526,
+          "ms": 355,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafybeiczdvonpsvxne2pvkcecb7lncpragqw2x6uia6sfvsiqtvgphygsm?format=car&dag-scope=block",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 526,
+          "ms": 422,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafybeiczdvonpsvxne2pvkcecb7lncpragqw2x6uia6sfvsiqtvgphygsm?format=car&dag-scope=block",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 297,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeiczdvonpsvxne2pvkcecb7lncpragqw2x6uia6sfvsiqtvgphygsm?format=car&dag-scope=block",
+          "bytesReceived": 352,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 5256,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafybeiczdvonpsvxne2pvkcecb7lncpragqw2x6uia6sfvsiqtvgphygsm?format=car&dag-scope=block",
+          "bytesReceived": 352,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 2208,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "coverage.json",
+      "cid": "bafkreib6wtej5sfl5r6cizsnyaw2fdnbia3qi32bigqhpjtfk4g3btcdsm",
+      "codec": "file",
+      "expected": {
+        "size": 8020,
+        "sha256": "3eb4c89ec8abec7c24664dc02da28da14037046f4141a077a665570db0cc4393"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafkreib6wtej5sfl5r6cizsnyaw2fdnbia3qi32bigqhpjtfk4g3btcdsm?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 58839,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafkreib6wtej5sfl5r6cizsnyaw2fdnbia3qi32bigqhpjtfk4g3btcdsm?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 526,
+          "ms": 39343,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafkreib6wtej5sfl5r6cizsnyaw2fdnbia3qi32bigqhpjtfk4g3btcdsm?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 19689,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreib6wtej5sfl5r6cizsnyaw2fdnbia3qi32bigqhpjtfk4g3btcdsm?format=raw",
+          "bytesReceived": 8020,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 7257,
+          "size": 8020,
+          "sha256": "3eb4c89ec8abec7c24664dc02da28da14037046f4141a077a665570db0cc4393",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafkreib6wtej5sfl5r6cizsnyaw2fdnbia3qi32bigqhpjtfk4g3btcdsm?format=raw",
+          "bytesReceived": 8020,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 2206,
+          "size": 8020,
+          "sha256": "3eb4c89ec8abec7c24664dc02da28da14037046f4141a077a665570db0cc4393",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "deltas.json",
+      "cid": "bafkreicwrlyi6s2x4nm65z54qd7sqlulirjhtvwpefmzlvz5iwi6lcgeby",
+      "codec": "file",
+      "expected": {
+        "size": 586,
+        "sha256": "568af08f4b57e359eee7bc80ff282e8b445279d6cf215995d73d4591e588c40e"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafkreicwrlyi6s2x4nm65z54qd7sqlulirjhtvwpefmzlvz5iwi6lcgeby?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 39216,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafkreicwrlyi6s2x4nm65z54qd7sqlulirjhtvwpefmzlvz5iwi6lcgeby?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 19736,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafkreicwrlyi6s2x4nm65z54qd7sqlulirjhtvwpefmzlvz5iwi6lcgeby?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 277,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreicwrlyi6s2x4nm65z54qd7sqlulirjhtvwpefmzlvz5iwi6lcgeby?format=raw",
+          "bytesReceived": 586,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 6811,
+          "size": 586,
+          "sha256": "568af08f4b57e359eee7bc80ff282e8b445279d6cf215995d73d4591e588c40e",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafkreicwrlyi6s2x4nm65z54qd7sqlulirjhtvwpefmzlvz5iwi6lcgeby?format=raw",
+          "bytesReceived": 586,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 2204,
+          "size": 586,
+          "sha256": "568af08f4b57e359eee7bc80ff282e8b445279d6cf215995d73d4591e588c40e",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "history.json",
+      "cid": "bafkreigkygjnlkdfldgtgaxqrn4xvn5yeo3ayjko3sxnqn6kaweeiuerda",
+      "codec": "file",
+      "expected": {
+        "size": 63524,
+        "sha256": "cac192d5a86558cd3302f08b797ab7b823b60c254edcaed837ca058844509118"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafkreigkygjnlkdfldgtgaxqrn4xvn5yeo3ayjko3sxnqn6kaweeiuerda?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 187,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafkreigkygjnlkdfldgtgaxqrn4xvn5yeo3ayjko3sxnqn6kaweeiuerda?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 526,
+          "ms": 284,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafkreigkygjnlkdfldgtgaxqrn4xvn5yeo3ayjko3sxnqn6kaweeiuerda?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 526,
+          "ms": 98,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreigkygjnlkdfldgtgaxqrn4xvn5yeo3ayjko3sxnqn6kaweeiuerda?format=raw",
+          "bytesReceived": 63524,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 6672,
+          "size": 63524,
+          "sha256": "cac192d5a86558cd3302f08b797ab7b823b60c254edcaed837ca058844509118",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafkreigkygjnlkdfldgtgaxqrn4xvn5yeo3ayjko3sxnqn6kaweeiuerda?format=raw",
+          "bytesReceived": 63524,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 704,
+          "size": 63524,
+          "sha256": "cac192d5a86558cd3302f08b797ab7b823b60c254edcaed837ca058844509118",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "indexes/doc_year_calibration.parquet",
+      "cid": "bafkreigi6jcd5ldudeblqr3wqguirmqgl3ed2ucw6h23d63hboymj5gnla",
+      "codec": "file",
+      "expected": {
+        "size": 1429,
+        "sha256": "c8f2443eac741902b8477681a888b2065ec83d5056f1f5b1fb670bb0c4f4cd58"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafkreigi6jcd5ldudeblqr3wqguirmqgl3ed2ucw6h23d63hboymj5gnla?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 58358,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafkreigi6jcd5ldudeblqr3wqguirmqgl3ed2ucw6h23d63hboymj5gnla?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 38907,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafkreigi6jcd5ldudeblqr3wqguirmqgl3ed2ucw6h23d63hboymj5gnla?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 19450,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreigi6jcd5ldudeblqr3wqguirmqgl3ed2ucw6h23d63hboymj5gnla?format=raw",
+          "bytesReceived": 1429,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 3938,
+          "size": 1429,
+          "sha256": "c8f2443eac741902b8477681a888b2065ec83d5056f1f5b1fb670bb0c4f4cd58",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafkreigi6jcd5ldudeblqr3wqguirmqgl3ed2ucw6h23d63hboymj5gnla?format=raw",
+          "bytesReceived": 1429,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 104,
+          "size": 1429,
+          "sha256": "c8f2443eac741902b8477681a888b2065ec83d5056f1f5b1fb670bb0c4f4cd58",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "indexes/property_geo.parquet",
+      "cid": "bafybeiex4e5jq4hipgsuufn3cvsluvhmxqmt23i2u66shz5nkcqhcpufge",
+      "codec": "file",
+      "expected": {
+        "size": 8076820,
+        "sha256": "379dac4d1a95fc5530d27349f13937e39e654b436050c69230268de0542f2121"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafybeiex4e5jq4hipgsuufn3cvsluvhmxqmt23i2u66shz5nkcqhcpufge?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 39352,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafybeiex4e5jq4hipgsuufn3cvsluvhmxqmt23i2u66shz5nkcqhcpufge?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 19581,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafybeiex4e5jq4hipgsuufn3cvsluvhmxqmt23i2u66shz5nkcqhcpufge?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 526,
+          "ms": 99,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeiex4e5jq4hipgsuufn3cvsluvhmxqmt23i2u66shz5nkcqhcpufge?format=car",
+          "bytesReceived": 8077638,
+          "blocksVerified": 9,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 5454,
+          "size": 8076820,
+          "sha256": "379dac4d1a95fc5530d27349f13937e39e654b436050c69230268de0542f2121",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafybeiex4e5jq4hipgsuufn3cvsluvhmxqmt23i2u66shz5nkcqhcpufge?format=car",
+          "bytesReceived": 8077638,
+          "blocksVerified": 9,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 3074,
+          "size": 8076820,
+          "sha256": "379dac4d1a95fc5530d27349f13937e39e654b436050c69230268de0542f2121",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "reconciliation.json",
+      "cid": "bafkreiexfjlpfkxhbz2hrxa4mgvjfyikojcozcqqwo6dbn42hs23e7iez4",
+      "codec": "file",
+      "expected": {
+        "size": 1908,
+        "sha256": "972a56f2aae70e7478dc1c61aa92e10a7244ec8a10b3bc30b79a3cb5b27d04cf"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafkreiexfjlpfkxhbz2hrxa4mgvjfyikojcozcqqwo6dbn42hs23e7iez4?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 175,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafkreiexfjlpfkxhbz2hrxa4mgvjfyikojcozcqqwo6dbn42hs23e7iez4?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 19889,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafkreiexfjlpfkxhbz2hrxa4mgvjfyikojcozcqqwo6dbn42hs23e7iez4?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 116,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreiexfjlpfkxhbz2hrxa4mgvjfyikojcozcqqwo6dbn42hs23e7iez4?format=raw",
+          "bytesReceived": 1908,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 7416,
+          "size": 1908,
+          "sha256": "972a56f2aae70e7478dc1c61aa92e10a7244ec8a10b3bc30b79a3cb5b27d04cf",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafkreiexfjlpfkxhbz2hrxa4mgvjfyikojcozcqqwo6dbn42hs23e7iez4?format=raw",
+          "bytesReceived": 1908,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 338,
+          "size": 1908,
+          "sha256": "972a56f2aae70e7478dc1c61aa92e10a7244ec8a10b3bc30b79a3cb5b27d04cf",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "samples/aged_roofs_top100.json",
+      "cid": "bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy",
+      "codec": "file",
+      "expected": {
+        "size": 34351,
+        "sha256": "d3f31abd89a7e71a919511309648a9d8466f614adc22ec5645eb2509a8836a16"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 19700,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 19751,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 19644,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy?format=raw",
+          "bytesReceived": 34351,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 6036,
+          "size": 34351,
+          "sha256": "d3f31abd89a7e71a919511309648a9d8466f614adc22ec5645eb2509a8836a16",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafkreigt6mnl3cnh44njdfirgclerkoyizxwcsw4elwfmrpleue2ra3kcy?format=raw",
+          "bytesReceived": 34351,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 291,
+          "size": 34351,
+          "sha256": "d3f31abd89a7e71a919511309648a9d8466f614adc22ec5645eb2509a8836a16",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "samples/open_roofing_permits_oldest100.json",
+      "cid": "bafkreif5go2hwfdydtlqdgu2vd6dbwwzdf5vhfaydakzwin75ixl7n2sh4",
+      "codec": "file",
+      "expected": {
+        "size": 52908,
+        "sha256": "bd33b47b14781cd7019a9aa8fc30dad9197b53941818159b21bfea2ebfb7523f"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafkreif5go2hwfdydtlqdgu2vd6dbwwzdf5vhfaydakzwin75ixl7n2sh4?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 39113,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafkreif5go2hwfdydtlqdgu2vd6dbwwzdf5vhfaydakzwin75ixl7n2sh4?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 19550,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafkreif5go2hwfdydtlqdgu2vd6dbwwzdf5vhfaydakzwin75ixl7n2sh4?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 19499,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreif5go2hwfdydtlqdgu2vd6dbwwzdf5vhfaydakzwin75ixl7n2sh4?format=raw",
+          "bytesReceived": 52908,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 4088,
+          "size": 52908,
+          "sha256": "bd33b47b14781cd7019a9aa8fc30dad9197b53941818159b21bfea2ebfb7523f",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafkreif5go2hwfdydtlqdgu2vd6dbwwzdf5vhfaydakzwin75ixl7n2sh4?format=raw",
+          "bytesReceived": 52908,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 495,
+          "size": 52908,
+          "sha256": "bd33b47b14781cd7019a9aa8fc30dad9197b53941818159b21bfea2ebfb7523f",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "samples/roofing_contractors.json",
+      "cid": "bafkreig7bsgpsyqikq2stgqhbzpmn3znbw4lu62bwv7mrmmhimqkml5zau",
+      "codec": "file",
+      "expected": {
+        "size": 37460,
+        "sha256": "df0c8cf962085435299a070e5ec6ef2d0db8ba7b41b57ec8b1874320a62fb905"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafkreig7bsgpsyqikq2stgqhbzpmn3znbw4lu62bwv7mrmmhimqkml5zau?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 212,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafkreig7bsgpsyqikq2stgqhbzpmn3znbw4lu62bwv7mrmmhimqkml5zau?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 167,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafkreig7bsgpsyqikq2stgqhbzpmn3znbw4lu62bwv7mrmmhimqkml5zau?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 111,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreig7bsgpsyqikq2stgqhbzpmn3znbw4lu62bwv7mrmmhimqkml5zau?format=raw",
+          "bytesReceived": 37460,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 4134,
+          "size": 37460,
+          "sha256": "df0c8cf962085435299a070e5ec6ef2d0db8ba7b41b57ec8b1874320a62fb905",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafkreig7bsgpsyqikq2stgqhbzpmn3znbw4lu62bwv7mrmmhimqkml5zau?format=raw",
+          "bytesReceived": 37460,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 508,
+          "size": 37460,
+          "sha256": "df0c8cf962085435299a070e5ec6ef2d0db8ba7b41b57ec8b1874320a62fb905",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "sources.json",
+      "cid": "bafkreieksrdi6xdanjkhoo2flrk7cortzjc5hqd66eteo3o4xcwcuighqi",
+      "codec": "file",
+      "expected": {
+        "size": 10031,
+        "sha256": "8a94468f5c606a54773b455c55f13a33ca45d3c07ef126476ddcb8ac2a20c782"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafkreieksrdi6xdanjkhoo2flrk7cortzjc5hqd66eteo3o4xcwcuighqi?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 118,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafkreieksrdi6xdanjkhoo2flrk7cortzjc5hqd66eteo3o4xcwcuighqi?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 165,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafkreieksrdi6xdanjkhoo2flrk7cortzjc5hqd66eteo3o4xcwcuighqi?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 74,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreieksrdi6xdanjkhoo2flrk7cortzjc5hqd66eteo3o4xcwcuighqi?format=raw",
+          "bytesReceived": 10031,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 7052,
+          "size": 10031,
+          "sha256": "8a94468f5c606a54773b455c55f13a33ca45d3c07ef126476ddcb8ac2a20c782",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafkreieksrdi6xdanjkhoo2flrk7cortzjc5hqd66eteo3o4xcwcuighqi?format=raw",
+          "bytesReceived": 10031,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 378,
+          "size": 10031,
+          "sha256": "8a94468f5c606a54773b455c55f13a33ca45d3c07ef126476ddcb8ac2a20c782",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "tables/business.parquet",
+      "cid": "bafybeihoylpcjh5uv6elkdoqcqegavral4sbd5p26bwmxjondzoik6bjbu",
+      "codec": "file",
+      "expected": {
+        "size": 7644116,
+        "sha256": "3ecffe19bdb7c6a2abef401b9d4110b8e8adb15f758be20a10cd66832060892b"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafybeihoylpcjh5uv6elkdoqcqegavral4sbd5p26bwmxjondzoik6bjbu?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 39184,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafybeihoylpcjh5uv6elkdoqcqegavral4sbd5p26bwmxjondzoik6bjbu?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 58644,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafybeihoylpcjh5uv6elkdoqcqegavral4sbd5p26bwmxjondzoik6bjbu?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 19738,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeihoylpcjh5uv6elkdoqcqegavral4sbd5p26bwmxjondzoik6bjbu?format=car",
+          "bytesReceived": 7644934,
+          "blocksVerified": 9,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 8026,
+          "size": 7644116,
+          "sha256": "3ecffe19bdb7c6a2abef401b9d4110b8e8adb15f758be20a10cd66832060892b",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafybeihoylpcjh5uv6elkdoqcqegavral4sbd5p26bwmxjondzoik6bjbu?format=car",
+          "bytesReceived": 7644934,
+          "blocksVerified": 9,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 2411,
+          "size": 7644116,
+          "sha256": "3ecffe19bdb7c6a2abef401b9d4110b8e8adb15f758be20a10cd66832060892b",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "tables/contractor.parquet",
+      "cid": "bafkreihtoynkd2eeqzvmeefzfwcij66dzzybiymllyl6ifjwr3momj5moi",
+      "codec": "file",
+      "expected": {
+        "size": 301514,
+        "sha256": "f3761aa1e884866ac210b92d8484fbc3ce7014618b5e17e415368ed8e627ac72"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafkreihtoynkd2eeqzvmeefzfwcij66dzzybiymllyl6ifjwr3momj5moi?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 39424,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafkreihtoynkd2eeqzvmeefzfwcij66dzzybiymllyl6ifjwr3momj5moi?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 526,
+          "ms": 39455,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafkreihtoynkd2eeqzvmeefzfwcij66dzzybiymllyl6ifjwr3momj5moi?format=raw",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 19668,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreihtoynkd2eeqzvmeefzfwcij66dzzybiymllyl6ifjwr3momj5moi?format=raw",
+          "bytesReceived": 301514,
+          "blocksVerified": 1,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 3898,
+          "size": 301514,
+          "sha256": "f3761aa1e884866ac210b92d8484fbc3ce7014618b5e17e415368ed8e627ac72",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafkreihtoynkd2eeqzvmeefzfwcij66dzzybiymllyl6ifjwr3momj5moi?format=raw",
+          "bytesReceived": 301514,
+          "blocksVerified": 1,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 713,
+          "size": 301514,
+          "sha256": "f3761aa1e884866ac210b92d8484fbc3ce7014618b5e17e415368ed8e627ac72",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "tables/permit.parquet",
+      "cid": "bafybeicysil63lnb4kq4cl6ikzlw7iy6pn6lwc5pvw442nfeg32vhbvvpu",
+      "codec": "file",
+      "expected": {
+        "size": 7728680,
+        "sha256": "93c6f02a16db17a5b6c1fbd2b000d741458817fb335c58e1b08fae2d95b0afcb"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafybeicysil63lnb4kq4cl6ikzlw7iy6pn6lwc5pvw442nfeg32vhbvvpu?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 526,
+          "ms": 19695,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafybeicysil63lnb4kq4cl6ikzlw7iy6pn6lwc5pvw442nfeg32vhbvvpu?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 526,
+          "ms": 19634,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafybeicysil63lnb4kq4cl6ikzlw7iy6pn6lwc5pvw442nfeg32vhbvvpu?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 522,
+          "ms": 19572,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeicysil63lnb4kq4cl6ikzlw7iy6pn6lwc5pvw442nfeg32vhbvvpu?format=car",
+          "bytesReceived": 7729498,
+          "blocksVerified": 9,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 4782,
+          "size": 7728680,
+          "sha256": "93c6f02a16db17a5b6c1fbd2b000d741458817fb335c58e1b08fae2d95b0afcb",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafybeicysil63lnb4kq4cl6ikzlw7iy6pn6lwc5pvw442nfeg32vhbvvpu?format=car",
+          "bytesReceived": 7729498,
+          "blocksVerified": 9,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 2497,
+          "size": 7728680,
+          "sha256": "93c6f02a16db17a5b6c1fbd2b000d741458817fb335c58e1b08fae2d95b0afcb",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    },
+    {
+      "name": "tables/property.parquet",
+      "cid": "bafybeidahippbjwkexwacwmi3outs23qwxzjymmgbncek7w5o6bjir3tn4",
+      "codec": "file",
+      "expected": {
+        "size": 16334807,
+        "sha256": "71453f4746354c2db65b3714076e19030f29fcfcbe8c9e9958057c1cb22b8c13"
+      },
+      "checks": [
+        {
+          "gateway": "https://ipfs.io",
+          "operator": "IPFS Foundation",
+          "url": "https://ipfs.io/ipfs/bafybeidahippbjwkexwacwmi3outs23qwxzjymmgbncek7w5o6bjir3tn4?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 525,
+          "ms": 19711,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://dweb.link",
+          "operator": "IPFS Foundation",
+          "url": "https://dweb.link/ipfs/bafybeidahippbjwkexwacwmi3outs23qwxzjymmgbncek7w5o6bjir3tn4?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 19818,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://trustless-gateway.link",
+          "operator": "IPFS Foundation",
+          "url": "https://trustless-gateway.link/ipfs/bafybeidahippbjwkexwacwmi3outs23qwxzjymmgbncek7w5o6bjir3tn4?format=car",
+          "bytesReceived": 0,
+          "blocksVerified": 0,
+          "servedBy": "trustless-gateway.link",
+          "status": 521,
+          "ms": 19771,
+          "ok": false,
+          "error": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endi"
+        },
+        {
+          "gateway": "https://gateway.pinata.cloud",
+          "operator": "Pinata",
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeidahippbjwkexwacwmi3outs23qwxzjymmgbncek7w5o6bjir3tn4?format=car",
+          "bytesReceived": 16336337,
+          "blocksVerified": 17,
+          "servedBy": "gateway.pinata.cloud",
+          "status": 200,
+          "ms": 6316,
+          "size": 16334807,
+          "sha256": "71453f4746354c2db65b3714076e19030f29fcfcbe8c9e9958057c1cb22b8c13",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        },
+        {
+          "gateway": "https://ipfs.orbitor.dev",
+          "operator": "orbitor.dev",
+          "url": "https://ipfs.orbitor.dev/ipfs/bafybeidahippbjwkexwacwmi3outs23qwxzjymmgbncek7w5o6bjir3tn4?format=car",
+          "bytesReceived": 16336337,
+          "blocksVerified": 17,
+          "servedBy": "ipfs.orbitor.dev",
+          "status": 200,
+          "ms": 4390,
+          "size": 16334807,
+          "sha256": "71453f4746354c2db65b3714076e19030f29fcfcbe8c9e9958057c1cb22b8c13",
+          "sizeMatches": true,
+          "digestMatches": true,
+          "ok": true
+        }
+      ],
+      "independentGatewaysOk": 2,
+      "independentOperatorsOk": 2,
+      "ok": true
+    }
+  ]
+}

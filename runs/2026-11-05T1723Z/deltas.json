@@ -1,0 +1,30 @@
+{
+  "previous_run": "2026-11-04T1714Z",
+  "previous_root_cid": "bafybeic2dp33g4rgcoidhvwwkgsspulm35cm7enwohzjzuncjz32jer6h4",
+  "deltas": {
+    "property": {
+      "added": 0,
+      "changed": 1201,
+      "removed": 0,
+      "unchanged": 493640
+    },
+    "permit": {
+      "added": 132,
+      "changed": 388,
+      "removed": 0,
+      "unchanged": 141798
+    },
+    "contractor": {
+      "added": 8,
+      "changed": 74,
+      "removed": 8,
+      "unchanged": 4968
+    },
+    "business": {
+      "added": 0,
+      "changed": 2,
+      "removed": 0,
+      "unchanged": 107673
+    }
+  }
+}
